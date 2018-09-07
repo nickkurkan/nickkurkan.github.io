@@ -1,0 +1,315 @@
+@charset "UTF-8";
+body {
+  font-family: Comfortaa, sans-serif;
+  width: 100%;
+}
+
+/* Хэдер и меню */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo a h1 {
+  margin: 0 0 0 0;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.menu ul {
+  height: 90px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu ul li {
+  margin-left: 15px;
+}
+
+.menu ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.menu ul li a::before {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menu ul li a:hover:before {
+  width: 100%;
+}
+
+.menu ul li label {
+  position: absolute;
+  padding: 0 2px 0 2px;
+  -webkit-transform: translate(70px, -9px);
+          transform: translate(70px, -9px);
+  background-color: #fff;
+}
+
+.menu ul li input {
+  border: 2px solid black;
+  width: 200px;
+  height: 20px;
+}
+
+.menu ul li input[placeholder] {
+  font-family: Comfortaa, sans-serif;
+  font-size: 15px;
+}
+
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.registration a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* Главный блок */
+main {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cities h2 {
+  font-size: 40px;
+}
+
+.cities p {
+  width: 400px;
+}
+
+.cities-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.cities-main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+.cities-main ul .firstc {
+  margin-right: 20px;
+}
+
+.cities-main ul li {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cities-main p {
+  width: 400px;
+}
+
+.cities-other {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cities-other .btn-cities {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  position: relative;
+  color: black;
+  border: 1px solid white;
+  background: none;
+  font-weight: 700;
+  font-family: Comfortaa, sans-serif;
+  letter-spacing: 2px;
+}
+
+.cities-other .btn-cities:before, .cities-other .btn-cities:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cities-other .btn-cities:before {
+  bottom: 0;
+  left: 0;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  -webkit-transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+
+.cities-other .btn-cities:after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
+  transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
+}
+
+.cities-other .btn-cities:hover:before, .cities-other .btn-cities:hover:after {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.cities-other .btn-cities:hover:before {
+  -webkit-transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+
+.cities-other .btn-cities:hover:after {
+  -webkit-transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;
+  transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;
+}
+
+.cities-other .cities-other-list {
+  width: 380px;
+  height: 110px;
+  padding: 0;
+  display: none;
+  list-style-type: none;
+}
+
+.cities-other .cities-other-list-active {
+  width: 380px;
+  height: 110px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.cities-other .cities-other-list-active .firstco, .cities-other .cities-other-list-active .secondco, .cities-other .cities-other-list-active .thirdco {
+  margin-right: 20px;
+}
+
+.footer .mobile-footer {
+  width: 100%;
+  height: 60px;
+}
+
+.footer .mobile-footer ul {
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  list-style-type: none;
+}
+
+.footer .mobile-footer ul li {
+  width: 40px;
+  height: 40px;
+  margin: 0 50px 0 50px;
+}
+
+@media all and (max-width: 768px) {
+  .menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu ul li {
+    margin-bottom: 5px;
+  }
+  .menu ul li input, .menu ul li label {
+    display: none;
+  }
+}
+
+/*@media all and (min-width: 769px)
+  .mobile-footer
+    display: none*/
+/*# sourceMappingURL=style.css.map */
