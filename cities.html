@@ -12,99 +12,108 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo ">
-      <a href="https://www.autoparus.by/" title="На главную">
-        <h1>Автопарус</h1>
-      </a>
-    </div>
-    <div class="menu ">
-      <ul>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="#">Пользователям</a></li>
-        <li><a href="#">Продовцам</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Обратная связь</a></li>
-        <li><a href="#">О нас</a></li>
-        <li><label for="search">Поиск</label><input class="search" id="search" type="text" placeholder="Марка авто, название детали..."></li>
-      </ul>
-    </div>
-    <div class="registration">
-      <a href="login.html" title="Вход в личный кабинет"><img src="img/login.svg" alt="Вход"></a>
-      <a href="registration.html" title="Регистрация"><img src="img/reg.svg" alt="Регистрация"></a>
-    </div>
-  </header>
-
-  <main>
-    <div class="cities">
-      <h2>Заголовок второго уровня</h2>
-      <div class="cities-main">
+  <div class="wrap">
+    <header class="header">
+      <div class="logo ">
+        <a href="https://www.autoparus.by/" title="На главную">
+          <h1>Автопарус</h1>
+        </a>
+      </div>
+      <div class="menu-mobile">
+        <button class="btn-menu">Menu</button>
+      </div>
+      <div class="menu ">
         <ul>
-          <div class="firstc">
-            <li>Минск</li>
-            <li>Брест</li>
-            <li>Витебск</li>
-          </div>
-          <div class="secondc">
-            <li>Гродно</li>
-            <li>Гомель</li>
-            <li>Могилев</li>
-          </div>
-        </ul>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis omnis nostrum in consequuntur error
-          inventore magnam, nemo minus? Omnis labore quo aspernatur velit at voluptatum dolore facere, maiores, nulla
-          unde rerum officia laborum aperiam eaque ullam aut tempora sapiente illum error accusamus aliquam! Expedita
-          corrupti assumenda fugit rem ipsam id.</p>
-      </div>
-
-      <div class="cities-other">
-        <button class="btn-cities">Показать все города</button>
-        <ul class="cities-other-list">
-          <div class="firstco">
-            <li>Барановичи</li>
-            <li>Береза</li>
-            <li>Бешенковичи</li>
-            <li>Борисов</li>
-            <li>Быхов</li>
-            <li>Вилейка</li>
-          </div>
-          <div class="secondco">
-            <li>Барань</li>
-            <li>Березино</li>
-            <li>Бобруйск</li>
-            <li>Брагин</li>
-            <li>Василевичи</li>
-            <li>Волковыск</li>
-          </div>
-          <div class="thirdco">
-            <li>Белоозерск</li>
-            <li>Березовка</li>
-            <li>Богушевск</li>
-            <li>Браслав</li>
-            <li>Ветка</li>
-            <li>Воложин</li>
-          </div>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Пользователям</a></li>
+          <li><a href="#">Продовцам</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Обратная связь</a></li>
+          <li><a href="#">О нас</a></li>
         </ul>
       </div>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum quia repellat rem deleniti
-        necessitatibus ducimus eos quod labore iste voluptate quas enim nesciunt dolorum nemo voluptatem esse, vel
-        sequi architecto asperiores eum exercitationem excepturi vitae? Doloribus dolorem eum nostrum hic, repellat
-        sit, non suscipit veritatis illo saepe quia facere.</p>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer">
-      <div class="mobile-footer">
-        <ul>
-          <li><a href=""><img src="img/home.svg" alt="На главную"></a></li>
-          <li><a href=""><img src="img/search.svg" alt="Поиск"></a></li>
-          <li><a href=""><img src="img/user.svg" alt="Личный кабинет"></a></li>
-        </ul>
+      <div class="search"><label for="search">Поиск</label><input id="search" type="text" placeholder="Марка авто, название детали..."></div>
+      <div class="registration">
+        <a href="login.html" title="Вход в личный кабинет"><img src="img/login.svg" alt="Вход"></a>
+        <a href="registration.html" title="Регистрация"><img src="img/reg.svg" alt="Регистрация"></a>
       </div>
-    </div>
-  </footer>
+    </header>
+  </div>
+
+  <div class="wrap">
+    <main>
+      <div class="cities">
+        <h2>Заголовок второго уровня</h2>
+        <div class="cities-main">
+          <ul>
+            <div class="firstc">
+              <li>Минск</li>
+              <li>Брест</li>
+              <li>Витебск</li>
+            </div>
+            <div class="secondc">
+              <li>Гродно</li>
+              <li>Гомель</li>
+              <li>Могилев</li>
+            </div>
+          </ul>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis omnis nostrum in consequuntur error
+            inventore magnam, nemo minus? Omnis labore quo aspernatur velit at voluptatum dolore facere, maiores, nulla
+            unde rerum officia laborum aperiam eaque ullam aut tempora sapiente illum error accusamus aliquam! Expedita
+            corrupti assumenda fugit rem ipsam id.</p>
+        </div>
+
+        <div class="cities-other">
+          <button class="btn-cities">Показать все города</button>
+          <ul class="cities-other-list">
+            <div class="firstco">
+              <li>Барановичи</li>
+              <li>Береза</li>
+              <li>Бешенковичи</li>
+              <li>Борисов</li>
+              <li>Быхов</li>
+              <li>Вилейка</li>
+            </div>
+            <div class="secondco">
+              <li>Барань</li>
+              <li>Березино</li>
+              <li>Бобруйск</li>
+              <li>Брагин</li>
+              <li>Василевичи</li>
+              <li>Волковыск</li>
+            </div>
+            <div class="thirdco">
+              <li>Белоозерск</li>
+              <li>Березовка</li>
+              <li>Богушевск</li>
+              <li>Браслав</li>
+              <li>Ветка</li>
+              <li>Воложин</li>
+            </div>
+          </ul>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum quia repellat rem deleniti
+          necessitatibus ducimus eos quod labore iste voluptate quas enim nesciunt dolorum nemo voluptatem esse, vel
+          sequi architecto asperiores eum exercitationem excepturi vitae? Doloribus dolorem eum nostrum hic, repellat
+          sit, non suscipit veritatis illo saepe quia facere.</p>
+      </div>
+    </main>
+  </div>
+
+  <div class="wrap">
+    <footer>
+      <div class="footer">
+        <div class="mobile-footer">
+          <ul>
+            <li><a href=""><img src="img/home.svg" alt="На главную"></a></li>
+            <li><a href=""><img src="img/search.svg" alt="Поиск"></a></li>
+            <li><a href=""><img src="img/user.svg" alt="Личный кабинет"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/citiesMain.js"></script>
 </body>

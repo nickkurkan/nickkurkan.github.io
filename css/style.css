@@ -1,120 +1,117 @@
 @charset "UTF-8";
 body {
   font-family: Comfortaa, sans-serif;
-  width: 100%;
+}
+
+.wrap {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.wrap:first-of-type {
+  margin: 0% auto;
+}
+
+.wrap:nth-of-type(2) {
+  margin: 0% auto 5% auto;
 }
 
 /* Хэдер и меню */
 .header {
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.logo {
-  margin-left: 20px;
-}
-
-.logo a {
-  color: black;
-  text-decoration: none;
-}
-
-.logo a h1 {
-  margin: 0 0 0 0;
-  font-size: 5em;
-  font-weight: bold;
-}
-
-.menu ul {
-  height: 90px;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.menu ul li {
-  margin-left: 15px;
+.header .logo {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  height: 80px;
 }
 
-.menu ul li a {
-  font-size: 20px;
+.header .logo a {
   text-decoration: none;
   color: black;
-  position: relative;
 }
 
-.menu ul li a::before {
-  content: '';
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: black;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.menu ul li a:hover:before {
-  width: 100%;
-}
-
-.menu ul li label {
-  position: absolute;
-  padding: 0 2px 0 2px;
-  -webkit-transform: translate(70px, -9px);
-          transform: translate(70px, -9px);
-  background-color: #fff;
-}
-
-.menu ul li input {
-  border: 2px solid black;
-  width: 200px;
-  height: 20px;
-}
-
-.menu ul li input[placeholder] {
-  font-family: Comfortaa, sans-serif;
-  font-size: 15px;
-}
-
-.registration {
+.header .menu {
+  height: 80px;
+  -ms-flex-negative: 6;
+      flex-shrink: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: inherit;
-  margin-left: auto;
-  margin-right: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.registration a {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 40px;
-  height: 40px;
-  margin-left: 20px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.header .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.header .menu ul li {
+  margin-right: 15px;
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .search input {
+  justify-self: flex-end;
+  border: 2px solid black;
+}
+
+.header .search label {
+  position: absolute;
+  -webkit-transform: translate(70px, -10px);
+          transform: translate(70px, -10px);
+  background-color: white;
+  padding: 0 2px 0 2px;
+}
+
+.header .registration {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .registration a {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.header .menu-mobile {
+  display: none;
 }
 
 /* Главный блок */
 main {
-  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,6 +126,8 @@ main {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
+  /* Футер */
 }
 
 .cities h2 {
@@ -136,6 +135,8 @@ main {
 }
 
 .cities p {
+  -ms-flex-negative: 6;
+      flex-shrink: 6;
   width: 400px;
 }
 
@@ -154,6 +155,9 @@ main {
 }
 
 .cities-main ul {
+  -ms-flex-negative: 6;
+      flex-shrink: 6;
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,13 +170,13 @@ main {
 }
 
 .cities-main ul li {
+  -ms-flex-negative: 6;
+      flex-shrink: 6;
+  width: 180px;
+  height: 45px;
+  font-size: 200%;
   margin-bottom: 20px;
-  font-size: 40px;
   font-weight: bold;
-}
-
-.cities-main p {
-  width: 400px;
 }
 
 .cities-other {
@@ -180,6 +184,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -280,9 +286,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
   list-style-type: none;
@@ -291,25 +296,45 @@ main {
 .footer .mobile-footer ul li {
   width: 40px;
   height: 40px;
-  margin: 0 50px 0 50px;
 }
 
-@media all and (max-width: 768px) {
-  .menu ul {
+@media all and (max-width: 1024px) {
+  .header {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header .logo {
+    margin: 0 0 0 0;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .menu ul li {
+  .header .menu ul li {
     margin-bottom: 5px;
   }
-  .menu ul li input, .menu ul li label {
+  .header .menu ul li input, .header .menu ul li label {
     display: none;
+  }
+  .header .registration, .header .search {
+    display: none;
+  }
+  .header .menu-mobile {
+    display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
-/*@media all and (min-width: 769px)
-  .mobile-footer
-    display: none*/
+@media all and (min-width: 1025px) {
+  .mobile-footer {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
