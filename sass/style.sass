@@ -15,12 +15,14 @@ body
   display: flex
   justify-content: space-around
   align-items: center
+  
   .logo
     flex-shrink: 2
     height: 80px
     a
       text-decoration: none
       color: black
+  
   .menu
     height: 80px
     flex-shrink: 6
@@ -37,7 +39,19 @@ body
         a
           text-decoration: none
           color: black
-        
+          position: relative
+        a:before
+          content: ''
+          left: 0
+          bottom: 0
+          position: absolute
+          width: 0%
+          height: 2px
+          background-color: black
+          transition: 0.4s
+        a:hover:before
+          width: 100%
+                 
   .search
     input
       justify-self: flex-end
@@ -57,10 +71,53 @@ body
       width: 50px
       height: 50px
       margin-right: 15px
+  
   .menu-mobile
     display: none
+/* Кнопки */
 
-  
+.btn-cities
+  align-self: center
+  text-decoration: none
+  cursor: pointer
+  outline: none
+  padding: 20px 30px
+  margin: 10px 20px
+  position: relative
+  color: black
+  border: 1px solid white
+  background: none
+  font-weight: 700
+  font-family: Comfortaa, sans-serif
+  letter-spacing: 2px
+.btn-cities:before, .btn-cities:after
+  content: ""
+  position: absolute
+  width: 0
+  height: 0
+  opacity: 0
+  box-sizing: border-box
+.btn-cities:before
+  bottom: 0
+  left: 0
+  border-left: 2px solid black
+  border-top: 2px solid black
+  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s
+.btn-cities:after
+  top: 0
+  right: 0
+  border-right: 2px solid black
+  border-bottom: 2px solid black
+  transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s
+.btn-cities:hover:before, .btn-cities:hover:after
+  height: 100%
+  width: 100%
+  opacity: 1
+.btn-cities:hover:before
+  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s
+.btn-cities:hover:after
+  transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s
+
 /* Главный блок */
 
 main
@@ -73,9 +130,7 @@ main
   width: 100%
   h2
     font-size: 40px
-  p
-    flex-shrink: 6
-    width: 400px
+    text-align: center
   &-main
     display: flex
     flex-wrap: wrap
@@ -85,98 +140,71 @@ main
     ul
       flex-shrink: 6
       width: 400px
+      height: 195px
       display: flex
+      justify-content: center
+      align-items: stretch
       list-style-type: none
       margin-right: 50px
+      li
+        font-size: 200%
+        margin: 15px 0
+        font-weight: bold
       .firstc
         margin-right: 20px
-      li
-        flex-shrink: 6
-        width: 180px
-        height: 45px
-        font-size: 200%
-        margin-bottom: 20px
-        font-weight: bold
+    .cities-main-p
+      flex-shrink: 6
+      width: 400px
+      height: 195px
   &-other
     width: 100%
     display: flex
     flex-wrap: wrap
     justify-content: center
-    .btn-cities
-      align-self: center
-      text-decoration: none
-      cursor: pointer
-      outline: none
-      padding: 20px 30px
-      margin: 10px 20px
-      position: relative
-      color: black
-      border: 1px solid white
-      background: none
-      font-weight: 700
-      font-family: Comfortaa, sans-serif
-      letter-spacing: 2px
-    .btn-cities:before, .btn-cities:after
-      content: ""
-      position: absolute
-      width: 0
-      height: 0
-      opacity: 0
-      box-sizing: border-box
-    .btn-cities:before
-      bottom: 0
-      left: 0
-      border-left: 2px solid black
-      border-top: 2px solid black
-      transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s
-    .btn-cities:after
-      top: 0
-      right: 0
-      border-right: 2px solid black
-      border-bottom: 2px solid black
-      transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s
-    .btn-cities:hover:before, .btn-cities:hover:after
-      height: 100%
-      width: 100%
-      opacity: 1
-    .btn-cities:hover:before 
-      transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s
-    .btn-cities:hover:after 
-      transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s
     .cities-other-list
       width: 380px
-      height: 110px
       padding: 0
       display: none
       list-style-type: none
       &-active
         width: 380px
-        height: 110px
         padding: 0
         display: flex
+        flex-wrap: wrap
+        justify-content: center
         list-style-type: none
-        .firstco, .secondco, .thirdco
+        .firstco, .secondco, .thirdco, .firstco-mobile, .secondco-mobile
           margin-right: 20px
+  p
+    flex-shrink: 6
+    width: 400px
+    height: 195px
 
   /* Футер */
-.footer
-  .mobile-footer
+
+.mobile-footer
+  width: 100%
+  min-height: 40px
+  position: sticky
+  bottom: 0
+  padding-bottom: 2px
+  border-top: 2px solid black
+  background-color: #fff
+  ul
+    padding: 0
+    margin: px 0
     width: 100%
-    height: 60px
-    ul
-      padding: 0
-      width: 100%
-      display: flex
-      justify-content: space-around
-      align-content: center
-      list-style-type: none
-      li
-        width: 40px
-        height: 40px
+    display: flex
+    justify-content: space-around
+    align-content: center
+    list-style-type: none
+    li
+      width: 40px
+      height: 40px
 
 @media all and (max-width: 1024px)
   .header
-    justify-content: space-around
+    height: 100px
     .logo
       margin: 0 0 0 0
     .menu
@@ -189,14 +217,50 @@ main
             display: none
     .registration, .search
       display: none
-    .menu-mobile
+    .btn-menu
       display: block
       align-self: center
+      margin-left: 10px
+  .cities
+    &-other
+      .firstco, .secondco, .thirdco
+        display: none
+      .firstco-mobile, .secondco-mobile
+        text-align: center
+    &-main
+        ul
+          justify-content: center
 
-      
+@media all and (max-width: 576px)
+  .cities
+    h2
+      font-size: 30px
+      margin: 10px 0
+    &-main
+        ul
+          width: 300px
+          height: 140px
+          margin-right: 0
+          padding: 0
+          justify-content: center
+          li
+            width: 130px
+            height: 30px
+            font-size: 150%
+            text-align: center
+        .cities-main-p
+          height: auto
+    p
+      height: auto
 
 @media all and (min-width: 1025px)
   .mobile-footer
+    display: none
+  .cities
+    &-other
+      .firstco-mobile, .secondco-mobile
+        display: none
+  .btn-menu
     display: none
 
 
