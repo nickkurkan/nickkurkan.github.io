@@ -1,3 +1,3 @@
 # nickkurkan.github.io
-* [Автопарус](nickkurkan.github.io/cities.html)
+* [Автопарус](cities.html)
 
