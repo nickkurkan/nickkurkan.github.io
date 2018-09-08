@@ -13,32 +13,41 @@
 
 <body>
   <div class="wrap">
+
     <header class="header">
-      <div class="logo ">
-        <a href="https://www.autoparus.by/" title="На главную">
-          <h1>Автопарус</h1>
+
+      <div class="main-menu-wrap">
+        <div class="logo ">
+          <a href="https://www.autoparus.by/" title="На главную">
+            <h1>Автопарус</h1>
+          </a>
+        </div>
+
+        <a class="btn-menu" href="#">
+          <span></span>
         </a>
-      </div>
 
-      <button class="btn-menu">Menu</button>
+        <div class="menu ">
+          <ul>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="#">Пользователям</a></li>
+            <li><a href="#">Продовцам</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#">О нас</a></li>
+          </ul>
+        </div>
 
-      <div class="menu-mobile">
-        <ul>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Пользователям</a></li>
-          <li><a href="#">Продовцам</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Обратная связь</a></li>
-          <li><a href="#">О нас</a></li>
-        </ul>
         <div class="search"><label for="search">Поиск</label><input id="search" type="text" placeholder="Марка авто, название детали..."></div>
+
         <div class="registration">
           <a href="login.html" title="Вход в личный кабинет"><img src="img/login.svg" alt="Вход"></a>
           <a href="registration.html" title="Регистрация"><img src="img/reg.svg" alt="Регистрация"></a>
         </div>
       </div>
 
-      <div class="menu ">
+      <div class="menu-mobile">
+        <div class="search-mobile"><input id="search" type="text" placeholder="Поиск"></div>
         <ul>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Пользователям</a></li>
@@ -47,14 +56,12 @@
           <li><a href="#">Обратная связь</a></li>
           <li><a href="#">О нас</a></li>
         </ul>
+        <div class="registration-mobile">
+          <a href="login.html" title="Вход в личный кабинет"><img src="img/login.svg" alt="Вход"></a>
+          <a href="registration.html" title="Регистрация"><img src="img/reg.svg" alt="Регистрация"></a>
+        </div>
       </div>
 
-      <div class="search"><label for="search">Поиск</label><input id="search" type="text" placeholder="Марка авто, название детали..."></div>
-
-      <div class="registration">
-        <a href="login.html" title="Вход в личный кабинет"><img src="img/login.svg" alt="Вход"></a>
-        <a href="registration.html" title="Регистрация"><img src="img/reg.svg" alt="Регистрация"></a>
-      </div>
     </header>
   </div>
 
@@ -115,19 +122,19 @@
               <li>Бешенковичи</li>
               <li>Борисов</li>
               <li>Быхов</li>
-              <li>Вилейка</li>
+              <li>Браслав</li>
               <li>Барань</li>
               <li>Березино</li>
               <li>Бобруйск</li>
             </div>
             <div class="secondco-mobile">
               <li>Брагин</li>
-              <li>Василевичи</li>
-              <li>Волковыск</li>
               <li>Белоозерск</li>
               <li>Березовка</li>
               <li>Богушевск</li>
-              <li>Браслав</li>
+              <li>Волковыск</li>
+              <li>Василевичи</li>
+              <li>Вилейка</li>
               <li>Ветка</li>
               <li>Воложин</li>
             </div>
@@ -142,15 +149,36 @@
     </main>
   </div>
 
-  <div class="wrap">
-    <footer>
-      <div class="footer">
-        <div class="stantard-footer">
 
-        </div>
+  <footer>
+    <div class="footer">
+      <div class="links">
+        <ul>
+          <li><a class="foot-img aboutus" href="#">О нас</a></li>
+          <li><a class="foot-img privacy" href="#">Политика конфиденциальности</a></li>
+          <li><a class="foot-img terms" href="#">Пользовательское соглашение</a></li>
+        </ul>
       </div>
-    </footer>
-  </div>
+
+      <div class="soc-media">
+        <ul>
+          <li><a class="vk" href="#"><img class="foot-img" src="img/vk.svg" alt="Вконтакте"></a></li>
+          <li><a class="ok" href="#"><img class="foot-img" src="img/odnoklassniki.svg" alt="Одноклассники"></a></li>
+          <li><a class="inst" href="#"><img class="foot-img" src="img/instagram.svg" alt="Инстаграмм"></a></li>
+          <li><a class="fb" href="#"><img class="foot-img" src="img/facebook.svg" alt="Фейсбук"></a></li>
+          <li><a class="yt" href="#"><img class="foot-img" src="img/youtube.svg" alt="Ютуб"></a></li>
+        </ul>
+
+        <ul>
+          <li><a class="phone" href="#"><img class="foot-img" src="img/phone-call.svg" alt="Телефон">+9-999-999-99</a></li>
+          <li><a class="viber" href="#"><img class="foot-img" src="img/viber.svg" alt="Вайбер">+9-999-999-99</a></li>
+          <li><a class="tlgm" href="#"><img class="foot-img" src="img/telegram.svg" alt="Телеграмм">+9-999-999-99</a></li>
+          <li><a class="wtsu" href="#"><img class="foot-img" src="img/whatsapp.svg" alt="ВатсАп">+9-999-999-99</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
 
   <div class="mobile-footer">
     <ul>

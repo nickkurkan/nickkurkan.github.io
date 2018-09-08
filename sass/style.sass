@@ -13,9 +13,15 @@ body
 .header
   height: 150px
   display: flex
+  flex-wrap: wrap
   justify-content: space-around
   align-items: center
   
+  .main-menu-wrap
+    display: flex
+    justify-content: space-around
+    width: 100%
+
   .logo
     flex-shrink: 2
     height: 80px
@@ -30,6 +36,7 @@ body
     align-items: center
     ul
       display: flex
+      flex-direction: raw
       flex-wrap: wrap
       justify-content: space-around
       align-items: center
@@ -53,6 +60,7 @@ body
           width: 100%
                  
   .search
+    align-self: center
     input
       justify-self: flex-end
       border: 2px solid black
@@ -66,14 +74,87 @@ body
     flex-shrink: 2
     height: 80px
     display: flex
+    margin-left: 20px
     align-items: center
     a
       width: 50px
       height: 50px
       margin-right: 15px
   
-  .menu-mobile
+  .btn-menu
     display: none
+    width: 50px
+    height: 50px
+    background-color: white
+    position: relative
+    span, span::before, span::after
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -1px
+      margin-left: -10px
+      width: 20px
+      height: 2px
+      background-color: black
+      transition: .5s
+    span::before, span::after
+        content: ''
+        display: block
+    span::before
+        transform: translateY(-5px)
+    span::after
+        transform: translateY(5px)
+  .btn-menu-active
+    span
+      width: 0
+    span::before
+      transform: rotate(45deg)
+    span::after
+      transform: rotate(-45deg)
+  .menu-mobile
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    height: 0
+    width: 150%
+    opacity: 0
+    transition: 1s
+    ul
+      display: flex
+      flex-direction: column
+      list-style-type: none
+      padding: 0
+      li
+        margin-bottom: 5px
+        a
+          text-decoration: none
+          color: black
+          text-align: center
+    .search-mobile, .registration-mobile
+      display: flex
+    .search-mobile
+      justify-content: center
+      width: 100%
+      input
+        align-self: center
+        border: 2px solid black
+    .registration-mobile
+      align-self: center
+      a
+        margin-left: 10px
+        width: 30px
+        height: 30px
+  .menu-mobile-active
+    display: flex
+    justify-content: center
+    align-content: center
+    flex-wrap: wrap
+    width: 150%
+    height: 180px
+    opacity: 1
+    margin-bottom: 20px
+    
+    
 /* Кнопки */
 
 .btn-cities
@@ -129,7 +210,7 @@ main
   flex-wrap: wrap
   width: 100%
   h2
-    font-size: 40px
+    font-size: 25px
     text-align: center
   &-main
     display: flex
@@ -180,7 +261,71 @@ main
     width: 400px
     height: 195px
 
-  /* Футер */
+/* Футер */
+
+footer
+  width: 100%
+  height: 140
+  bottom: 0
+  border-top: 2px solid black
+  .footer
+    height: 140
+    display: flex
+    .links
+      width: 50%
+      ul
+        list-style-type: none
+        li
+          margin-top: 5px
+          a
+            text-decoration: none
+            color: black
+            position: relative
+          a:before
+            content: ''
+            left: 0
+            bottom: 0
+            position: absolute
+            width: 0%
+            height: 2px
+            background-color: black
+            transition: 0.4s
+          a:hover:before
+            width: 100%
+    .soc-media
+      width: 50%
+      display: flex
+      justify-content: flex-end
+      ul:first-of-type
+        display: flex
+        li
+          margin-right: 10px
+      ul
+        padding: 10px
+        margin: 0 40px 0 0px
+        list-style-type: none
+        li
+          margin-top: 5px
+          a
+            text-decoration: none
+            color: black
+            position: relative
+          a:before
+            content: ''
+            left: 0
+            bottom: 0
+            position: absolute
+            width: 0%
+            height: 2px
+            background-color: black
+            transition: 0.4s
+          a:hover:before
+            width: 100%
+      .foot-img
+        width: 20px
+        height: 20px
+      
+      
 
 .mobile-footer
   width: 100%
@@ -204,7 +349,8 @@ main
 
 @media all and (max-width: 1024px)
   .header
-    height: 100px
+    height: auto
+    flex-wrap: wrap
     .logo
       margin: 0 0 0 0
     .menu
@@ -221,6 +367,7 @@ main
       display: block
       align-self: center
       margin-left: 10px
+    
   .cities
     &-other
       .firstco, .secondco, .thirdco
@@ -230,6 +377,8 @@ main
     &-main
         ul
           justify-content: center
+  footer
+    display: none
 
 @media all and (max-width: 576px)
   .cities
@@ -261,6 +410,8 @@ main
       .firstco-mobile, .secondco-mobile
         display: none
   .btn-menu
+    display: none
+  .menu-mobile
     display: none
 
 
