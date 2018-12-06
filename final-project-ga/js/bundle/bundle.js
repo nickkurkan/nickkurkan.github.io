@@ -732,7 +732,7 @@
                 };
 
                 slides[slideIndex].classList.add('animated');
-                slides[slideIndex].classList.add('fadeInDown');
+                slides[slideIndex].classList.add('fadeIn');
                 slides[slideIndex].style.display = 'block';
             }, 5000);
 
