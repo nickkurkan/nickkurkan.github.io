@@ -52,6 +52,39 @@ p
     background-color: darken($btn-color, 5%)
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3)
 
+input[type="submit"], .input-file
+  background-color: $btn-color
+  border: none
+  border-radius: 13px
+  font-weight: bold
+  color: #fff
+  margin-top: 20px
+  padding: 15px
+  
+input[type="email"], textarea
+  background-color: transparent
+  border: 2px solid $btn-color
+  border-radius: 13px
+  width: 100%
+  padding: 15px
+  margin-top: 20px
+  &::placeholder
+    color: $primary-text
+input[type="submit"]
+  width: 100%
+  padding: 18px
+.input-file
+  display: flex
+  justify-content: space-around
+  align-items: center
+  input[type="file"]
+    width: 0
+    height: 0
+  img
+    width: 20px
+    height: 20px
+    filter: invert(100)
+
 .sub-text
   color: $sub-text
 
@@ -91,7 +124,6 @@ header
   margin-top: 150px
   &_item
     font-weight: bold
-    white-space: nowrap
     &__2
       text-align: center
     &__3
@@ -297,7 +329,7 @@ header
 // Страница "Оцените ваше приложение"
 
 .estimate
-  h1 
+  h1
     text-align: center
   &_head
     margin-top: 150px
@@ -308,10 +340,11 @@ header
       &:last-of-type
         margin-top: 20px
   &-form
+    h2
+      text-align: center
+      margin-bottom: 40px
     &_size, &_ui, &_api, &_security
       margin: 150px 0 150px 0
-      h1 
-        margin-bottom: 40px
       &_btn
         display: flex
         align-items: center
@@ -337,11 +370,13 @@ header
       padding: 150px 0 150px 0
       background-color: $primary-text
       color: #fff
+    &_contact
+      margin: 150px 0 150px 0
     &_num
       position: absolute
       font-size: 2.25em
       font-weight: bold
-      margin-left: 5% 
+      margin-left: 5%
     &_text
       margin: 0 auto
       font-weight: bold
@@ -354,7 +389,7 @@ header
     background-color: $primary-text
     color: #fff
     img
-     filter: invert(100)
+      filter: invert(100)
 .hover-blue
   transition: color .5s, backgorund-color .5s, border .5s
   &:hover
@@ -377,6 +412,10 @@ header
     justify-content: center
   .btn
     width: 100%
+  .services
+    margin-top: 50px
+    &_item
+      text-align: left
   .scrum, .clients, .team, .projects, .our-team, .footer
     margin-top: 50px
     &_text
@@ -386,7 +425,7 @@ header
     &_types_item
       margin: 60px 0 0 0
   .estimate
-    h1, h2
+    h1
       text-align: left
     &_head
       margin-top: 50px
@@ -394,10 +433,11 @@ header
         text-align: left
         white-space: normal
     &-form
+      h2
+        text-align: left
       &_size, &_ui, &_api, &_security
         margin: 50px 0 50px 0
         &_btn
           margin-top: 20px
       &_ui, &_security
         padding: 50px 0 50px 0
-

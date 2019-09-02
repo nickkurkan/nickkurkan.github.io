@@ -68,6 +68,69 @@ p {
           box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
+input[type="submit"], .input-file {
+  background-color: #9fb3e3;
+  border: none;
+  border-radius: 13px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+input[type="email"], textarea {
+  background-color: transparent;
+  border: 2px solid #9fb3e3;
+  border-radius: 13px;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #3e4659;
+}
+
+input[type="email"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #3e4659;
+}
+
+input[type="email"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #3e4659;
+}
+
+input[type="email"]::placeholder, textarea::placeholder {
+  color: #3e4659;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 18px;
+}
+
+.input-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-file input[type="file"] {
+  width: 0;
+  height: 0;
+}
+
+.input-file img {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
 .sub-text {
   color: #828899;
 }
@@ -115,7 +178,6 @@ header {
 
 .services_item {
   font-weight: bold;
-  white-space: nowrap;
 }
 
 .services_item__2 {
@@ -409,12 +471,13 @@ header {
   margin-top: 20px;
 }
 
-.estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
-  margin: 150px 0 150px 0;
+.estimate-form h2 {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.estimate-form_size h1, .estimate-form_ui h1, .estimate-form_api h1, .estimate-form_security h1 {
-  margin-bottom: 40px;
+.estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
+  margin: 150px 0 150px 0;
 }
 
 .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn {
@@ -462,6 +525,10 @@ header {
   padding: 150px 0 150px 0;
   background-color: #3e4659;
   color: #fff;
+}
+
+.estimate-form_contact {
+  margin: 150px 0 150px 0;
 }
 
 .estimate-form_num {
@@ -526,6 +593,12 @@ header {
   .btn {
     width: 100%;
   }
+  .services {
+    margin-top: 50px;
+  }
+  .services_item {
+    text-align: left;
+  }
   .scrum, .clients, .team, .projects, .our-team, .footer {
     margin-top: 50px;
   }
@@ -538,7 +611,7 @@ header {
   .clients_types_item {
     margin: 60px 0 0 0;
   }
-  .estimate h1, .estimate h2 {
+  .estimate h1 {
     text-align: left;
   }
   .estimate_head {
@@ -547,6 +620,9 @@ header {
   .estimate_head_text {
     text-align: left;
     white-space: normal;
+  }
+  .estimate-form h2 {
+    text-align: left;
   }
   .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
     margin: 50px 0 50px 0;
