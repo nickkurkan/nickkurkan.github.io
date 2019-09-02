@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=cyrillic-ext");
+body {
+  background-color: #dbdee2;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e4659;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.btn {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transition: .5s background-color, border, color, -webkit-box-shadow;
+  transition: .5s background-color, border, color, -webkit-box-shadow;
+  transition: .5s background-color, border, box-shadow,color;
+  transition: .5s background-color, border, box-shadow,color, -webkit-box-shadow;
+}
+
+.btn-contact {
+  border: 2px solid #9fb3e3;
+  background-color: transparent;
+  color: #3e4659;
+}
+
+.btn-contact:hover {
+  border: 2px solid #7894d7;
+  color: #ffffff;
+}
+
+.btn-request, .btn-construct, .btn-price {
+  width: 240px;
+  background-color: #9fb3e3;
+  margin-top: 40px;
+}
+
+.btn-request {
+  margin-right: 10px;
+}
+
+.btn-price {
+  width: 340px;
+}
+
+.btn:hover {
+  background-color: #8ba3dd;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sub-text {
+  color: #828899;
+}
+
+.mt130 {
+  margin-top: 130px;
+}
+
+header {
+  padding-top: 30px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #7d8db3;
+}
+
+.tel, .email {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.tel a, .email a {
+  font-weight: bold;
+  color: #3e4659;
+  text-decoration: none;
+}
+
+.main-page {
+  margin-top: 100px;
+}
+
+.phones-img img {
+  width: 125%;
+}
+
+.services {
+  margin-top: 150px;
+}
+
+.services_item {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.services_item__2 {
+  text-align: center;
+}
+
+.services_item__3 {
+  text-align: end;
+}
+
+.scrum {
+  margin-top: 200px;
+}
+
+.scrum_text {
+  margin-top: 30px;
+  white-space: nowrap;
+}
+
+.scrum_box {
+  background-color: #fff;
+  border-radius: 13px;
+  border: 5px solid #dbdee2;
+}
+
+.scrum_box .wrap {
+  width: 90%;
+  margin: 35px auto;
+}
+
+.scrum_box_num {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.scrum_box_text {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.scrum_box__cubes::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/cubes.svg");
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -110px;
+}
+
+.scrum_box__cubes-min::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/cubes-min.svg");
+  width: 120px;
+  height: 105px;
+  right: -23px;
+  top: -75px;
+}
+
+.clients {
+  margin-top: 150px;
+  padding: 140px 0;
+  background-color: #3e4659;
+}
+
+.clients h3 {
+  color: #9fb3e3;
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: #9fb3e3;
+  position: absolute;
+  left: -30px;
+  top: 9px;
+}
+
+.clients p {
+  color: #ffffff;
+}
+
+.clients_header {
+  color: #ffffff;
+}
+
+.clients_types_item p {
+  margin-top: 20px;
+}
+
+.clients_types_item__business, .clients_types_item__manager {
+  margin-bottom: 100px;
+}
+
+.clients_types_item__business::before, .clients_types_item__manager::before, .clients_types_item__director::before, .clients_types_item__startup::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: -50px;
+  top: 20px;
+}
+
+.clients_types_item__business::before {
+  width: 68px;
+  left: -30px;
+  background-image: url("../img/business.svg");
+}
+
+.clients_types_item__manager::before {
+  left: -25px;
+  background-image: url("../img/manager.svg");
+}
+
+.clients_types_item__director::before {
+  width: 92px;
+  height: 92px;
+  left: -30px;
+  background-image: url("../img/director.svg");
+}
+
+.clients_types_item__startup::before {
+  left: -30px;
+  background-image: url("../img/startup.svg");
+}
+
+.team {
+  margin-top: 150px;
+}
+
+.team_text {
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.team_box {
+  background-color: #fff;
+  border-radius: 13px;
+  border: 5px solid #dbdee2;
+}
+
+.team_box .wrap {
+  width: 90%;
+  margin: 35px auto;
+}
+
+.team_box_num {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.team_box_text {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.team_box__cubes::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/cubes-reversed.svg");
+  width: 160px;
+  height: 160px;
+  top: -90px;
+  left: -70px;
+}
+
+.team_box__cubes-min::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/cubes-min-reversed.svg");
+  width: 110px;
+  height: 80px;
+  right: -15px;
+  bottom: -80px;
+}
+
+.projects {
+  margin-top: 150px;
+  padding: 140px 0;
+  background-color: #3e4659;
+}
+
+.projects p {
+  color: #ffffff;
+}
+
+.projects_header {
+  color: #ffffff;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
+  padding-bottom: 80px;
+}
+
+.slider .slide {
+  background-color: #656b7a;
+  width: 350px;
+  height: 225px;
+}
+
+.our-team {
+  margin-top: 150px;
+}
+
+.our-team_text {
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.our-team_members_item {
+  background-color: #fff;
+  border: 10px solid #dbdee2;
+  border-radius: 26px;
+}
+
+.our-team_members_item .names-wrap {
+  margin-top: 110px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.our-team_members_item .names-wrap .name {
+  font-weight: bold;
+}
+
+.our-team_members_item .names-wrap .position {
+  color: #d0d6e4;
+}
+
+.our-team_members_item::before {
+  content: '';
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  left: 20%;
+}
+
+.footer {
+  margin-top: 150px;
+  padding: 150px 0 150px 0;
+  background-color: rgba(62, 70, 89, 0.1);
+}
+
+.footer_text {
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.footer .contacts {
+  font-size: 0.9rem;
+}
+
+.footer .contacts .tel {
+  margin-right: 150px;
+}
+
+.footer .contacts_text {
+  margin-top: 10%;
+}
+
+.footer .contacts_items {
+  margin-top: 50px;
+}
+
+.estimate h1 {
+  text-align: center;
+}
+
+.estimate_head {
+  margin-top: 150px;
+}
+
+.estimate_head_text {
+  text-align: center;
+  white-space: pre-line;
+  margin-top: 30px;
+}
+
+.estimate_head_text:last-of-type {
+  margin-top: 20px;
+}
+
+.estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
+  margin: 150px 0 150px 0;
+}
+
+.estimate-form_size h1, .estimate-form_ui h1, .estimate-form_api h1, .estimate-form_security h1 {
+  margin-bottom: 40px;
+}
+
+.estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  cursor: pointer;
+  -webkit-transition: color .5s, backgorund-color .5s;
+  transition: color .5s, backgorund-color .5s;
+}
+
+.estimate-form_size_btn input, .estimate-form_ui_btn input, .estimate-form_api_btn input, .estimate-form_security_btn input {
+  opacity: 0;
+}
+
+.estimate-form_size_btn img, .estimate-form_ui_btn img, .estimate-form_api_btn img, .estimate-form_security_btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.estimate-form_size_btn .img-invert, .estimate-form_ui_btn .img-invert, .estimate-form_api_btn .img-invert, .estimate-form_security_btn .img-invert {
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
+.estimate-form_size_btn .text-wrap, .estimate-form_ui_btn .text-wrap, .estimate-form_api_btn .text-wrap, .estimate-form_security_btn .text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 10% 0 10% 0;
+}
+
+.estimate-form_ui, .estimate-form_security {
+  padding: 150px 0 150px 0;
+  background-color: #3e4659;
+  color: #fff;
+}
+
+.estimate-form_num {
+  position: absolute;
+  font-size: 2.25em;
+  font-weight: bold;
+  margin-left: 5%;
+}
+
+.estimate-form_text {
+  margin: 0 auto;
+  font-weight: bold;
+  max-height: 40px;
+  text-align: center;
+}
+
+.hover-dark {
+  -webkit-transition: color .5s, backgorund-color .5s;
+  transition: color .5s, backgorund-color .5s;
+}
+
+.hover-dark:hover {
+  background-color: #3e4659;
+  color: #fff;
+}
+
+.hover-dark:hover img {
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
+.hover-blue {
+  -webkit-transition: color .5s, backgorund-color .5s, border .5s;
+  transition: color .5s, backgorund-color .5s, border .5s;
+}
+
+.hover-blue:hover {
+  background-color: #9fb3e3;
+  border: 2px solid #9fb3e3;
+}
+
+.checked {
+  background-color: #ffffff;
+}
+
+.checked-dark {
+  background-color: #ffffff;
+  color: #3e4659;
+}
+
+@media screen and (max-width: 576px) {
+  h1, h2 {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+  .logo, .tel, .btn-contact {
+    margin-top: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .btn {
+    width: 100%;
+  }
+  .scrum, .clients, .team, .projects, .our-team, .footer {
+    margin-top: 50px;
+  }
+  .scrum_text, .clients_text, .team_text, .projects_text, .our-team_text, .footer_text {
+    white-space: normal;
+  }
+  .clients {
+    padding: 50px 0;
+  }
+  .clients_types_item {
+    margin: 60px 0 0 0;
+  }
+  .estimate h1, .estimate h2 {
+    text-align: left;
+  }
+  .estimate_head {
+    margin-top: 50px;
+  }
+  .estimate_head_text {
+    text-align: left;
+    white-space: normal;
+  }
+  .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
+    margin: 50px 0 50px 0;
+  }
+  .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn {
+    margin-top: 20px;
+  }
+  .estimate-form_ui, .estimate-form_security {
+    padding: 50px 0 50px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
