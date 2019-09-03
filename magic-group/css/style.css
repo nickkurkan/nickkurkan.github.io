@@ -25,6 +25,12 @@ p {
   line-height: 1.5rem;
 }
 
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
 .btn {
   width: 100%;
   height: 60px;
@@ -62,7 +68,7 @@ p {
 }
 
 .btn-price {
-  width: 340px;
+  width: 50%;
 }
 
 .btn:hover {
@@ -193,6 +199,7 @@ header {
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .logo span {
@@ -205,9 +212,7 @@ header {
 }
 
 .tel a, .email a {
-  font-weight: bold;
   color: #3e4659;
-  text-decoration: none;
 }
 
 .main-page {
@@ -215,7 +220,7 @@ header {
 }
 
 .phones-img img {
-  width: 125%;
+  width: 100%;
 }
 
 .services {
@@ -352,7 +357,6 @@ header {
 
 .our-team_text {
   margin-top: 20px;
-  white-space: pre-line;
 }
 
 .our-team_member_card {
@@ -399,7 +403,6 @@ header {
 
 .footer_text {
   margin-top: 20px;
-  white-space: nowrap;
 }
 
 .footer .contacts {
@@ -573,6 +576,10 @@ header {
   width: 100%;
 }
 
+.team {
+  margin-top: 100px;
+}
+
 .team_member .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -699,7 +706,7 @@ header {
   .estimate-form_text {
     font-size: 0.9rem;
   }
-  .team-head h1, .team-head p {
+  .team-head {
     text-align: center;
   }
   .team_member {
@@ -718,12 +725,21 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .btn {
     width: 100%;
   }
   .btn-request, .btn-construct {
     width: 50%;
+  }
+  .team_member_card {
+    margin-top: 100px;
+  }
+  .team_member_card::before {
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -100px;
   }
 }
 /*# sourceMappingURL=style.css.map */
