@@ -48,7 +48,7 @@ p {
   color: #ffffff;
 }
 
-.btn-request, .btn-construct, .btn-price {
+.btn-request, .btn-construct, .btn-price, .btn-aboutus {
   width: 240px;
   background-color: #9fb3e3;
   margin-top: 40px;
@@ -78,7 +78,7 @@ input[type="submit"], .input-file {
   padding: 15px;
 }
 
-input[type="email"], textarea {
+input[type="email"], input[type="text"], textarea {
   background-color: transparent;
   border: 2px solid #9fb3e3;
   border-radius: 13px;
@@ -87,19 +87,19 @@ input[type="email"], textarea {
   margin-top: 20px;
 }
 
-input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input[type="email"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #3e4659;
 }
 
-input[type="email"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input[type="email"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #3e4659;
 }
 
-input[type="email"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+input[type="email"]::-ms-input-placeholder, input[type="text"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #3e4659;
 }
 
-input[type="email"]::placeholder, textarea::placeholder {
+input[type="email"]::placeholder, input[type="text"]::placeholder, textarea::placeholder {
   color: #3e4659;
 }
 
@@ -120,8 +120,18 @@ input[type="submit"] {
 }
 
 .input-file input[type="file"] {
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+}
+
+.input-file p {
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .input-file img {
@@ -531,6 +541,23 @@ header {
   margin: 150px 0 150px 0;
 }
 
+.estimate-form_contact_header {
+  text-align: center;
+}
+
+.estimate-form_contact_fields {
+  margin-bottom: 20px;
+}
+
+.estimate-form_contact .text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .estimate-form_num {
   position: absolute;
   font-size: 2.25em;
@@ -579,7 +606,70 @@ header {
   color: #3e4659;
 }
 
-@media screen and (max-width: 576px) {
+.team-head {
+  margin-top: 80px;
+}
+
+.team-head h1 {
+  margin-bottom: 20px;
+}
+
+.team-head img {
+  width: 100%;
+}
+
+.team_member .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team_member_card {
+  background-color: #fff;
+  border-radius: 13px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.team_member_card::before {
+  content: '';
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.team_member_name, .team_member_position {
+  text-align: center;
+}
+
+.team_member_name {
+  font-weight: bold;
+}
+
+.team_member_position {
+  color: #d0d6e4;
+}
+
+.team-form {
+  margin: 150px 0 150px 0;
+}
+
+.team-form input[type="submit"] {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
   h1, h2 {
     font-size: 2.25rem;
     text-align: left;
@@ -624,14 +714,34 @@ header {
   .estimate-form h2 {
     text-align: left;
   }
-  .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
+  .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security, .estimate-form_contact {
     margin: 50px 0 50px 0;
   }
-  .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn {
+  .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn, .estimate-form_contact_btn {
     margin-top: 20px;
   }
   .estimate-form_ui, .estimate-form_security {
     padding: 50px 0 50px 0;
+  }
+  .estimate-form_text {
+    font-size: 0.9rem;
+  }
+  .team-head h1, .team-head p {
+    text-align: center;
+  }
+  .team_member {
+    margin-top: 150px;
+  }
+  .team_member_text {
+    margin-top: 30px;
+  }
+  .team-form {
+    margin: 50px 0 50px 0;
+  }
+  .team-form h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

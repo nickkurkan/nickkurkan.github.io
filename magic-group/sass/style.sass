@@ -40,7 +40,7 @@ p
     &:hover
       border: 2px solid darken($btn-color, 10%)
       color: #ffffff
-  &-request, &-construct, &-price
+  &-request, &-construct, &-price, &-aboutus
     width: 240px
     background-color: $btn-color
     margin-top: 40px
@@ -61,7 +61,7 @@ input[type="submit"], .input-file
   margin-top: 20px
   padding: 15px
   
-input[type="email"], textarea
+input[type="email"], input[type="text"], textarea
   background-color: transparent
   border: 2px solid $btn-color
   border-radius: 13px
@@ -78,8 +78,16 @@ input[type="submit"]
   justify-content: space-around
   align-items: center
   input[type="file"]
-    width: 0
-    height: 0
+    width: 1px
+    height: 1px
+    opacity: 0
+    position: absolute
+  p 
+    display: block
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
   img
     width: 20px
     height: 20px
@@ -372,6 +380,13 @@ header
       color: #fff
     &_contact
       margin: 150px 0 150px 0
+      &_header 
+        text-align: center
+      &_fields
+        margin-bottom: 20px
+      .text-wrap
+        display: flex
+        align-items: center
     &_num
       position: absolute
       font-size: 2.25em
@@ -401,9 +416,52 @@ header
     background-color: #ffffff
     color: $primary-text
 
+// Страница "Наша команда"
+
+.team-head
+  margin-top: 80px
+  h1
+    margin-bottom: 20px
+  img 
+    width: 100%
+.team
+  &_member
+    .row
+      align-items: center
+    &_card
+      background-color: #fff
+      border-radius: 13px
+      padding-top: 120px 
+      padding-bottom: 40px
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
+      &::before
+        content: ''
+        background-color: #fff
+        border: 2px solid black
+        border-radius: 50%
+        width: 200px
+        height: 200px
+        position: absolute
+        top: -50%
+        left: 50%
+        margin-left: -100px
+    &_name, &_position
+      text-align: center
+    &_name
+      font-weight: bold
+    &_position
+      color: #d0d6e4
+  &-form
+    margin: 150px 0 150px 0
+    input[type="submit"]
+      display: block
+      width: 50%
+      margin-left: auto
+      margin-right: auto
+
 // Media
 
-@media screen and ( max-width: 576px )
+@media screen and ( max-width: 768px )
   h1, h2
     font-size: 2.25rem
     text-align: left
@@ -435,9 +493,26 @@ header
     &-form
       h2
         text-align: left
-      &_size, &_ui, &_api, &_security
+      &_size, &_ui, &_api, &_security, &_contact
         margin: 50px 0 50px 0
         &_btn
           margin-top: 20px
       &_ui, &_security
         padding: 50px 0 50px 0
+      &_text
+        font-size: 0.9rem
+  .team-head
+    h1, p
+      text-align: center
+  .team
+    &_member
+      margin-top: 150px
+      &_text
+        margin-top: 30px
+    &-form
+      margin: 50px 0 50px 0
+      h2
+        font-size: 1rem
+        line-height: 1.5rem
+        text-align: center
+  
