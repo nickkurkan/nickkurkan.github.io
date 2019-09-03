@@ -6,11 +6,12 @@ $team-name-text: #474e61
 
 // Общие стили
 
+html 
+  overflow-x: hidden
 body
   background-color: #dbdee2
   font-family: 'Montserrat', sans-serif
   color: $primary-text
-  overflow-x: hidden
 h1, h2
   font-size: 2.75rem
   font-weight: bold
@@ -99,6 +100,25 @@ input[type="submit"]
 .mt130
   margin-top: 130px
 
+.box
+  background-color: #fff
+  border-radius: 13px
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1)
+  padding: 10% 3% 10% 10%
+  margin-top: 15px
+  &_text-wrap
+    display: flex
+    align-items: flex-end
+  &_num, &_text
+    display: inline-block
+  &_num 
+    font-size: 2.5rem
+    font-weight: bold
+    margin-right: 5%
+  &_text
+    font-size: 0.9rem
+    white-space: pre-line
+
 // Хедер
 
 header
@@ -143,39 +163,24 @@ header
   margin-top: 200px
   &_text
     margin-top: 30px
-    white-space: nowrap
-  &_boxes
-  &_box
-    background-color: #fff
-    border-radius: 13px
-    border: 5px solid #dbdee2
-    .wrap
-      width: 90%
-      margin: 35px auto
-    &_num
-      font-size: 2.5rem
-      font-weight: bold
-      display: inline-block
-      margin-right: 30px
-    &_text
-      display: inline-block
-      font-size: 0.9rem
-    &__cubes::before
-      content: ''
-      position: absolute
-      background-image: url('../img/cubes.svg')
-      width: 200px
-      height: 200px
-      left: -100px
-      bottom: -110px
-    &__cubes-min::before
-      content: ''
-      position: absolute
-      background-image: url('../img/cubes-min.svg')
-      width: 120px
-      height: 105px
-      right: -23px
-      top: -75px
+    //white-space: nowrap
+
+// &__cubes::before
+//   content: ''
+//   position: absolute
+//   background-image: url('../img/cubes.svg')
+//   width: 200px
+//   height: 200px
+//   left: -100px
+//   bottom: -110px
+// &__cubes-min::before
+//   content: ''
+//   position: absolute
+//   background-image: url('../img/cubes-min.svg')
+//   width: 120px
+//   height: 105px
+//   right: -23px
+//   top: -75px
 
 // "Кому подходит приложение"
 
@@ -185,14 +190,14 @@ header
   background-color: $primary-text
   h3
     color: $btn-color
-    h3::before
-    content: ''
-    width: 30px
-    height: 3px
-    background: $btn-color
-    position: absolute
-    left: -30px
-    top: 9px
+    &::before
+      content: ''
+      width: 30px
+      height: 3px
+      background: $btn-color
+      position: absolute
+      left: -30px
+      top: 9px
   p
     color: #ffffff
   &_header
@@ -227,43 +232,26 @@ header
 
 // "Выделенная команда"
 
-.team
+.team-work
   margin-top: 150px
   &_text
     margin-top: 20px
-    white-space: nowrap
-  &_boxes
-  &_box
-    background-color: #fff
-    border-radius: 13px
-    border: 5px solid #dbdee2
-    .wrap
-      width: 90%
-      margin: 35px auto
-    &_num
-      font-size: 2.5rem
-      font-weight: bold
-      display: inline-block
-      margin-right: 30px
-    &_text
-      display: inline-block
-      font-size: 0.9rem
-    &__cubes::before
-      content: ''
-      position: absolute
-      background-image: url('../img/cubes-reversed.svg')
-      width: 160px
-      height: 160px
-      top: -90px
-      left: -70px
-    &__cubes-min::before
-      content: ''
-      position: absolute
-      background-image: url('../img/cubes-min-reversed.svg')
-      width: 110px
-      height: 80px
-      right: -15px
-      bottom: -80px
+    // &__cubes::before
+    //   content: ''
+    //   position: absolute
+    //   background-image: url('../img/cubes-reversed.svg')
+    //   width: 160px
+    //   height: 160px
+    //   top: -90px
+    //   left: -70px
+    // &__cubes-min::before
+    //   content: ''
+    //   position: absolute
+    //   background-image: url('../img/cubes-min-reversed.svg')
+    //   width: 110px
+    //   height: 80px
+    //   right: -15px
+    //   bottom: -80px
 
 // "Выполненные проекты"
 
@@ -291,30 +279,33 @@ header
   margin-top: 150px
   &_text
     margin-top: 20px
-    white-space: nowrap
-  &_members
-    &_item
+    white-space: pre-line
+  &_member
+    &_card
       background-color: #fff
-      border: 10px solid #dbdee2
-      border-radius: 26px
-      .names-wrap
-        margin-top: 110px
-        margin-bottom: 20px
-        text-align: center
-        font-size: 0.9rem
-        .name
-          font-weight: bold
-        .position
-          color: #d0d6e4
+      border-radius: 13px
+      margin-top: 130px
+      padding-top: 120px 
+      padding-bottom: 40px
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1)
       &::before
         content: ''
         background-color: #fff
+        border: 2px solid black
+        border-radius: 50%
         width: 200px
         height: 200px
-        border-radius: 50%
         position: absolute
-        top: -50%
-        left: 20%
+        top: 50%
+        margin-top: -130px
+        left: 50%
+        margin-left: -100px
+    &_name, &_position
+      text-align: center
+    &_name
+      font-weight: bold
+    &_position
+      color: #d0d6e4
 
 // Футер
 
@@ -462,26 +453,46 @@ header
 // Media
 
 @media screen and ( max-width: 768px )
+  //Общие стили
   h1, h2
     font-size: 2.25rem
     text-align: left
-  .logo, .tel, .btn-contact
+  header
     margin-top: 15px
-    justify-content: center
+    .logo, .tel
+      justify-content: center
+    .tel, .btn
+      margin-top: 15px
   .btn
     width: 100%
+  //Главный экран
   .services
     margin-top: 50px
     &_item
       text-align: left
-  .scrum, .clients, .team, .projects, .our-team, .footer
+  .scrum, .team-work
+    &_box
+      &_text
+        margin-top: 10px
+      &__cubes::before
+        content: none
+      &__cubes-min::before
+        content: none
+  .scrum, .clients, .team-work, .projects, .our-team, .footer
     margin-top: 50px
     &_text
       white-space: normal
+  // "Кому подходит приложение"
   .clients
     padding: 50px 0
+    h3 
+      &::before
+       top: 70px
+       left: -20px 
     &_types_item
       margin: 60px 0 0 0
+  // "Наша команда"
+  //Страница "Узнать стоимость"
   .estimate
     h1
       text-align: left
@@ -501,6 +512,7 @@ header
         padding: 50px 0 50px 0
       &_text
         font-size: 0.9rem
+  //Страница "Наша команда"
   .team-head
     h1, p
       text-align: center
@@ -516,3 +528,8 @@ header
         line-height: 1.5rem
         text-align: center
   
+@media screen and ( min-width: 768px )
+  .btn
+    width: 100%
+    &-request, &-construct
+      width: 50%

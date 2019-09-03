@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=cyrillic-ext");
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #dbdee2;
   font-family: 'Montserrat', sans-serif;
   color: #3e4659;
-  overflow-x: hidden;
 }
 
 h1, h2 {
@@ -149,6 +152,39 @@ input[type="submit"] {
   margin-top: 130px;
 }
 
+.box {
+  background-color: #fff;
+  border-radius: 13px;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10% 3% 10% 10%;
+  margin-top: 15px;
+}
+
+.box_text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.box_num, .box_text {
+  display: inline-block;
+}
+
+.box_num {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
+.box_text {
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
 header {
   padding-top: 30px;
 }
@@ -204,50 +240,6 @@ header {
 
 .scrum_text {
   margin-top: 30px;
-  white-space: nowrap;
-}
-
-.scrum_box {
-  background-color: #fff;
-  border-radius: 13px;
-  border: 5px solid #dbdee2;
-}
-
-.scrum_box .wrap {
-  width: 90%;
-  margin: 35px auto;
-}
-
-.scrum_box_num {
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-.scrum_box_text {
-  display: inline-block;
-  font-size: 0.9rem;
-}
-
-.scrum_box__cubes::before {
-  content: '';
-  position: absolute;
-  background-image: url("../img/cubes.svg");
-  width: 200px;
-  height: 200px;
-  left: -100px;
-  bottom: -110px;
-}
-
-.scrum_box__cubes-min::before {
-  content: '';
-  position: absolute;
-  background-image: url("../img/cubes-min.svg");
-  width: 120px;
-  height: 105px;
-  right: -23px;
-  top: -75px;
 }
 
 .clients {
@@ -258,6 +250,9 @@ header {
 
 .clients h3 {
   color: #9fb3e3;
+}
+
+.clients h3::before {
   content: '';
   width: 30px;
   height: 3px;
@@ -315,56 +310,12 @@ header {
   background-image: url("../img/startup.svg");
 }
 
-.team {
+.team-work {
   margin-top: 150px;
 }
 
-.team_text {
+.team-work_text {
   margin-top: 20px;
-  white-space: nowrap;
-}
-
-.team_box {
-  background-color: #fff;
-  border-radius: 13px;
-  border: 5px solid #dbdee2;
-}
-
-.team_box .wrap {
-  width: 90%;
-  margin: 35px auto;
-}
-
-.team_box_num {
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-.team_box_text {
-  display: inline-block;
-  font-size: 0.9rem;
-}
-
-.team_box__cubes::before {
-  content: '';
-  position: absolute;
-  background-image: url("../img/cubes-reversed.svg");
-  width: 160px;
-  height: 160px;
-  top: -90px;
-  left: -70px;
-}
-
-.team_box__cubes-min::before {
-  content: '';
-  position: absolute;
-  background-image: url("../img/cubes-min-reversed.svg");
-  width: 110px;
-  height: 80px;
-  right: -15px;
-  bottom: -80px;
 }
 
 .projects {
@@ -401,39 +352,43 @@ header {
 
 .our-team_text {
   margin-top: 20px;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
-.our-team_members_item {
+.our-team_member_card {
   background-color: #fff;
-  border: 10px solid #dbdee2;
-  border-radius: 26px;
+  border-radius: 13px;
+  margin-top: 130px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.our-team_members_item .names-wrap {
-  margin-top: 110px;
-  margin-bottom: 20px;
+.our-team_member_card::before {
+  content: '';
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  margin-top: -130px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.our-team_member_name, .our-team_member_position {
   text-align: center;
-  font-size: 0.9rem;
 }
 
-.our-team_members_item .names-wrap .name {
+.our-team_member_name {
   font-weight: bold;
 }
 
-.our-team_members_item .names-wrap .position {
+.our-team_member_position {
   color: #d0d6e4;
-}
-
-.our-team_members_item::before {
-  content: '';
-  background-color: #fff;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  top: -50%;
-  left: 20%;
 }
 
 .footer {
@@ -674,11 +629,16 @@ header {
     font-size: 2.25rem;
     text-align: left;
   }
-  .logo, .tel, .btn-contact {
+  header {
     margin-top: 15px;
+  }
+  header .logo, header .tel {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  header .tel, header .btn {
+    margin-top: 15px;
   }
   .btn {
     width: 100%;
@@ -689,14 +649,27 @@ header {
   .services_item {
     text-align: left;
   }
-  .scrum, .clients, .team, .projects, .our-team, .footer {
+  .scrum_box_text, .team-work_box_text {
+    margin-top: 10px;
+  }
+  .scrum_box__cubes::before, .team-work_box__cubes::before {
+    content: none;
+  }
+  .scrum_box__cubes-min::before, .team-work_box__cubes-min::before {
+    content: none;
+  }
+  .scrum, .clients, .team-work, .projects, .our-team, .footer {
     margin-top: 50px;
   }
-  .scrum_text, .clients_text, .team_text, .projects_text, .our-team_text, .footer_text {
+  .scrum_text, .clients_text, .team-work_text, .projects_text, .our-team_text, .footer_text {
     white-space: normal;
   }
   .clients {
     padding: 50px 0;
+  }
+  .clients h3::before {
+    top: 70px;
+    left: -20px;
   }
   .clients_types_item {
     margin: 60px 0 0 0;
@@ -742,6 +715,15 @@ header {
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+  .btn-request, .btn-construct {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */
