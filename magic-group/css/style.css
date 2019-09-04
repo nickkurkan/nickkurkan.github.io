@@ -191,6 +191,44 @@ input[type="submit"] {
   white-space: pre-line;
 }
 
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #dbdee2;
+  border-radius: 13px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 30vw;
+  padding: 2%;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  margin-left: -15vw;
+  margin-top: -25%;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+.popup p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.popup__active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup .close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
 header {
   padding-top: 30px;
 }
@@ -200,6 +238,10 @@ header {
   text-transform: uppercase;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.logo a {
+  color: #3e4659;
 }
 
 .logo span {
@@ -413,6 +455,7 @@ header {
 
 .our-team_member_name {
   font-weight: bold;
+  color: #3e4659;
 }
 
 .our-team_member_position {

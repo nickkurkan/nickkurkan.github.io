@@ -16,17 +16,12 @@
         <div class="container-fluid">
           <div class="row">
             <div class="logo col-12 col-md-4 col-lg-2 d-flex align-items-center">
-              <p><span>Magic</span> Group</p>
+              <a href="index.html"><span>Magic</span> Group</a>
             </div>
-            <div class="tel col-12 col-md-3 col-lg-3 offset-lg-3 d-flex align-items-center justify-content-center order-1 order-md-0">
+            <div
+              class="tel col-12 col-md-4 col-lg-3 offset-md-1 offset-lg-5 d-flex align-items-center justify-content-center order-1 order-md-0"
+            >
               <a href="tel:+38 (095) 00 00 000">+38 (095) 00 00 000</a>
-            </div>
-            <div class="col-12 col-md-3 col-lg-2 order-0 order-md-1">
-              <a href="index.html">
-                <button class="btn btn-contact">
-                  Главная
-                </button>
-              </a>
             </div>
             <div class="col-12 col-md-3 col-lg-2 order-0 order-md-1">
               <a href="team.html">
@@ -55,7 +50,7 @@
           </div>
         </div>
       </section>
-      <form action="" class="estimate-form">
+      <form action="telegram.php" method="POST" name="app-price" class="estimate-form">
         <fieldset class="estimate-form_size">
           <div class="container-fluid">
             <div class="row">
@@ -64,7 +59,7 @@
               </h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" id="" />
+                  <input type="radio" name="size" value="S">
                   <div class="text-wrap">
                     <p class="estimate-form_num">S</p>
                     <p class="estimate-form_text">Малое</p>
@@ -73,7 +68,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" id="" />
+                  <input type="radio" name="size" value="M">
                   <div class="text-wrap">
                     <p class="estimate-form_num">M</p>
                     <p class="estimate-form_text">Среднее</p>
@@ -82,7 +77,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" id="" />
+                  <input type="radio" name="size" value="L">
                   <div class="text-wrap">
                     <p class="estimate-form_num">L</p>
                     <p class="estimate-form_text">Большое</p>
@@ -98,7 +93,7 @@
               <h2 class="col-12">2. Какой уровень интерфейса вы бы хотели?</h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
-                  <input type="radio" name="ui" id="" />
+                  <input type="radio" name="ui" id="" value="S">
                   <div class="text-wrap">
                     <img src="img/scooter.png" class="img-invert" />
                     <p class="estimate-form_text">Малый</p>
@@ -107,7 +102,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
-                  <input type="radio" name="ui" id="" />
+                  <input type="radio" name="ui" id="" value="M">
                   <div class="text-wrap">
                     <img src="img/bicycle.png" class="img-invert" />
                     <p class="estimate-form_text">Основной</p>
@@ -116,7 +111,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
-                  <input type="radio" name="ui" id="" />
+                  <input type="radio" name="ui" id="" vvalue=""">
                   <div class="text-wrap">
                     <img src="img/motorcycle.png" class="img-invert" />
                     <p class="estimate-form_text">Полированный</p>
@@ -132,7 +127,7 @@
               <h2 class="col-12">3. Внешние API и Интеграции</h2>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="api" id="" />
+                  <input type="checkbox" name="integration_data-feed" id="" />
                   <div class="text-wrap">
                     <img src="img/network.png" class="" />
                     <p class="estimate-form_text">Фид данных</p>
@@ -141,7 +136,7 @@
               </div>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="api" id="" />
+                  <input type="checkbox" name="integration_API" id="" />
                   <div class="text-wrap">
                     <img src="img/gear.png" class="" />
                     <p class="estimate-form_text">API для других</p>
@@ -150,7 +145,7 @@
               </div>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="api" id="" />
+                  <input type="checkbox" name="integration_sms" id="" />
                   <div class="text-wrap">
                     <img src="img/sms.png" class="" />
                     <p class="estimate-form_text">Смс сообщения</p>
@@ -159,7 +154,7 @@
               </div>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="api" id="" />
+                  <input type="checkbox" name="integration_mask-phone" id="" />
                   <div class="text-wrap">
                     <img src="img/contact.png" class="" />
                     <p class="estimate-form_text">Маскировка номера</p>
@@ -175,7 +170,7 @@
               <h2 class="col-12">4. Безопасность</h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_security_btn hover-blue">
-                  <input type="checkbox" name="ui" id="" />
+                  <input type="checkbox" name="security_ssl" id="" />
                   <div class="text-wrap">
                     <img src="img/ssl.png" class="img-invert" />
                     <p class="estimate-form_text">SSL</p>
@@ -184,7 +179,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_security_btn hover-blue">
-                  <input type="checkbox" name="ui" id="" />
+                  <input type="checkbox" name="security_ddos" id="" />
                   <div class="text-wrap">
                     <img src="img/shield.png" class="img-invert" />
                     <p class="estimate-form_text">DDOS Защита</p>
@@ -193,7 +188,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_security_btn hover-blue">
-                  <input type="checkbox" name="ui" id="" />
+                  <input type="checkbox" name="security_auth" id="" />
                   <div class="text-wrap">
                     <img src="img/authentication.png" class="img-invert" />
                     <p class="estimate-form_text">Двухфакторная аутентификация</p>
@@ -210,12 +205,12 @@
                 <p class="estimate-form_contact_header">
                   Отправьте свою оценку, и мы начнем работать
                 </p>
-                <input type="email" placeholder="Email*" required />
-                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="email" placeholder="Email*" name="user_email" required />
+                <textarea name="user_message" id="" cols="30" rows="10" placeholder="Message"></textarea>
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <label class="input-file">
-                      <input type="file" />
+                      <input type="file" name="user_file" accept="image/jpeg,image/png">
                       <p>Загрузить файл</p>
                       <img src="img/download-button.png" alt="" />
                     </label>

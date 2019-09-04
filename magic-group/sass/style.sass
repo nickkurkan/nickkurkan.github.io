@@ -2,7 +2,6 @@
 $primary-text: #3e4659
 $btn-color: #9fb3e3
 $sub-text: #828899
-$team-name-text: #474e61
 
 // Общие стили
 
@@ -124,6 +123,35 @@ input[type="submit"]
     font-size: 0.9rem
     white-space: pre-line
 
+.popup
+  visibility: hidden
+  opacity: 0
+  background-color: #dbdee2
+  border-radius: 13px
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5)
+  width: 30vw
+  padding: 2%
+  position: absolute
+  left: 50%
+  top: 60%
+  margin-left: -15vw
+  margin-top: -25%
+  transition: 0.5s opacity
+  p 
+    text-align: center
+    font-weight: bold
+    font-size: 1.25rem
+  &__active
+    visibility: visible
+    opacity: 1
+  .close
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 15px
+    right: 15px
+    cursor: pointer
+
 // Хедер
 
 header
@@ -134,6 +162,8 @@ header
   text-transform: uppercase
   font-weight: bold
   white-space: nowrap
+  a
+   color: $primary-text
   span
     color: #7d8db3
 
@@ -318,6 +348,7 @@ header
       text-align: center
     &_name
       font-weight: bold
+      color: $primary-text
     &_position
       color: #d0d6e4
 
