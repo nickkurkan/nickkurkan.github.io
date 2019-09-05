@@ -71,7 +71,7 @@ if (document.querySelector(".estimate-form_size")) {
 
 /* Pop-Up script */
 
-if (document.querySelector("popup")) {
+if (document.querySelector(".popup")) {
   let btnPopup = document.querySelector(".btn-contact"),
     btnPopup1 = document.querySelector(".btn-request"),
     popup = document.querySelector(".popup"),

@@ -12,6 +12,7 @@ $integration_mask = $_POST['integration_mask-phone'];
 $security_ssl = $_POST['security_ssl'];
 $security_ddos = $_POST['security_ddos'];
 $security_auth = $_POST['security_auth'];
+$user_name = $_POST['user_name'];
 $user_phone = $_POST['user_phone'];
 $user_email = $_POST['user_email'];
 $user_message = $_POST['user_message'];
