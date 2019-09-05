@@ -12,9 +12,9 @@ $integration_mask = $_POST['integration_mask-phone'];
 $security_ssl = $_POST['security_ssl'];
 $security_ddos = $_POST['security_ddos'];
 $security_auth = $_POST['security_auth'];
+$user_phone = $_POST['user_phone'];
 $user_email = $_POST['user_email'];
 $user_message = $_POST['user_message'];
-$user_file = $_POST['user_file'];
 $token = "966083676:AAHAJjUJJiY8bTwIprwpA-CQpURLajn9P2Y";
 $chat_id = "-172379381";
 $arr = array(
@@ -29,9 +29,10 @@ $arr = array(
   '4.1 SSL' => $security_ssl,
   '4.2 DDOS' => $security_ddos,
   '4.3 Двухфакторная аутенфикация' => $security_auth,
+  'Имя' => $user_name,
+  'Телефон' => $user_phone,
   'Email' => $user_email,
-  'Сообщение' => $user_message,
-  'File' => $user_file
+  'Сообщение' => $user_message
 );
 
 foreach($arr as $key => $value) {
@@ -40,8 +41,23 @@ foreach($arr as $key => $value) {
 
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
+$url = "https://api.telegram.org/bot{$token}/sendDocument";
+// $_document = "ok.json";
+$_document = $_FILES['user_file']['tmp_name']['name'];
+$document = new CURLFile(realpath($_document));
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, ["chat_id" => "-172379381", "document" => $document]);
+curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type:multipart/form-data"]);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+$out = curl_exec($ch);
+curl_close($ch);
+print_r($out);
+
 if ($sendToTelegram) {
-  header('Location: thank-you.html');
+  echo "Мы с вами свяжемся";
 } else {
   echo "Error";
 }

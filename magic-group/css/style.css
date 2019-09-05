@@ -438,7 +438,7 @@ header {
 .our-team_member_card::before {
   content: '';
   background-color: #fff;
-  border: 2px solid black;
+  border: 2px solid #fff;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -447,6 +447,42 @@ header {
   margin-top: -130px;
   left: 50%;
   margin-left: -100px;
+}
+
+.our-team_member_card__1::before {
+  background-image: url("../img/team/1.jpg");
+  background-size: 200% auto;
+  background-position: center center;
+}
+
+.our-team_member_card__2::before {
+  background-image: url("../img/team/2.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.our-team_member_card__3::before {
+  background-image: url("../img/team/3.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.our-team_member_card__4::before {
+  background-image: url("../img/team/4.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.our-team_member_card__5::before {
+  background-image: url("../img/team/5.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.our-team_member_card__6::before {
+  background-image: url("../img/team/6.jpg");
+  background-size: 300% auto;
+  background-position: 47% 40%;
 }
 
 .our-team_member_name, .our-team_member_position {
@@ -665,7 +701,7 @@ header {
 .team_member_card::before {
   content: '';
   background-color: #fff;
-  border: 2px solid black;
+  border: 2px solid #fff;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -673,6 +709,42 @@ header {
   top: -50%;
   left: 50%;
   margin-left: -100px;
+}
+
+.team_member_card__1::before {
+  background-image: url("../img/team/1.jpg");
+  background-size: 200% auto;
+  background-position: center center;
+}
+
+.team_member_card__2::before {
+  background-image: url("../img/team/2.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.team_member_card__3::before {
+  background-image: url("../img/team/3.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.team_member_card__4::before {
+  background-image: url("../img/team/4.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.team_member_card__5::before {
+  background-image: url("../img/team/5.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
+}
+
+.team_member_card__6::before {
+  background-image: url("../img/team/6.jpg");
+  background-size: 300% auto;
+  background-position: 47% 40%;
 }
 
 .team_member_name, .team_member_position {
