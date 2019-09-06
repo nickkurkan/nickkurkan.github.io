@@ -24,11 +24,9 @@
               <a href="tel:+38 (095) 00 00 000">+38 (095) 00 00 000</a>
             </div>
             <div class="col-12 col-md-3 col-lg-2 order-0 order-md-1">
-              <a href="team.html">
-                <button class="btn btn-contact">
-                  Связаться с нами
-                </button>
-              </a>
+              <button class="btn btn-contact">
+                Связаться с нами
+              </button>
             </div>
           </div>
         </div>
@@ -159,7 +157,7 @@
           </div>
         </div>
       </section>
-      <form action="telegram.php" class="team-form" id="contact">
+      <form action="telegram-min.php" method="POST" class="team-form" id="contact" name="team-form">
         <div class="container-fluid">
           <div class="row align-items-center">
             <h2 class="col-12 col-lg-6 col-xl-4">
@@ -169,12 +167,24 @@
               <input type="text" name="user_name" placeholder="Name*" required />
               <input type="email" name="user_email" id="" placeholder="Email*" required />
               <input type="text" name="user_phone" id="" placeholder="Phone*" pattern="[+]\d{1,15}" required />
-              <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
+              <textarea name="user_message" id="" cols="30" rows="5" placeholder="Message"></textarea>
               <input type="submit" />
             </div>
           </div>
         </div>
       </form>
+
+      <div class="popup">
+        <form action="telegram-min.php" method="POST" name="popup-form">
+          <p>Оставить заявку</p>
+          <img class="close" src="img/close.svg" alt="Close" />
+          <input type="text" name="user_name" placeholder="Name*" required />
+          <input type="email" name="user_email" id="" placeholder="Email*" required />
+          <input type="text" name="user_phone" id="" placeholder="Phone*" required />
+          <textarea name="user_message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+          <input type="submit" />
+        </form>
+      </div>
     </main>
     <script src="js/main.js"></script>
   </body>

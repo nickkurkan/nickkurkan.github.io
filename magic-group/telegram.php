@@ -58,7 +58,7 @@ curl_close($ch);
 print_r($out);
 
 if ($sendToTelegram) {
-  echo "Мы с вами свяжемся";
+  header('Location: index.html');
 } else {
   echo "Error";
 }

@@ -24,11 +24,9 @@
               <a href="tel:+38 (095) 00 00 000">+38 (095) 00 00 000</a>
             </div>
             <div class="col-12 col-md-3 col-lg-2 order-0 order-md-1">
-              <a href="team.html">
-                <button class="btn btn-contact">
-                  Связаться с нами
-                </button>
-              </a>
+              <button class="btn btn-contact">
+                Связаться с нами
+              </button>
             </div>
           </div>
         </div>
@@ -59,7 +57,7 @@
               </h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" value="S">
+                  <input type="radio" name="size" value="S" />
                   <div class="text-wrap">
                     <p class="estimate-form_num">S</p>
                     <p class="estimate-form_text">Малое</p>
@@ -68,7 +66,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" value="M">
+                  <input type="radio" name="size" value="M" />
                   <div class="text-wrap">
                     <p class="estimate-form_num">M</p>
                     <p class="estimate-form_text">Среднее</p>
@@ -77,7 +75,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_size_btn hover-dark">
-                  <input type="radio" name="size" value="L">
+                  <input type="radio" name="size" value="L" />
                   <div class="text-wrap">
                     <p class="estimate-form_num">L</p>
                     <p class="estimate-form_text">Большое</p>
@@ -93,7 +91,7 @@
               <h2 class="col-12">2. Какой уровень интерфейса вы бы хотели?</h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
-                  <input type="radio" name="ui" id="" value="S">
+                  <input type="radio" name="ui" id="" value="S" />
                   <div class="text-wrap">
                     <img src="img/scooter.png" class="img-invert" />
                     <p class="estimate-form_text">Малый</p>
@@ -102,7 +100,7 @@
               </div>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
-                  <input type="radio" name="ui" id="" value="M">
+                  <input type="radio" name="ui" id="" value="M" />
                   <div class="text-wrap">
                     <img src="img/bicycle.png" class="img-invert" />
                     <p class="estimate-form_text">Основной</p>
@@ -205,14 +203,14 @@
                 <p class="estimate-form_contact_header">
                   Отправьте свою оценку, и мы начнем работать
                 </p>
-                <input type="text" placeholder="Name*" name="user_name" required>
-                <input type="text" placeholder="+38 (000) 00 00 000*" name="user_phone" pattern="[+]\d{1,15}" required>
-                <input type="email" placeholder="Email*" name="user_email" required>
+                <input type="text" placeholder="Name*" name="user_name" required />
+                <input type="text" placeholder="+38 (000) 00 00 000*" name="user_phone" pattern="[+]\d{1,15}" required />
+                <input type="email" placeholder="Email*" name="user_email" required />
                 <textarea name="user_message" id="" cols="30" rows="10" placeholder="Message"></textarea>
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <label class="input-file">
-                      <input type="file" name="user_file" accept="image/jpeg,image/png">
+                      <input type="file" name="user_file" accept="image/jpeg,image/png" />
                       <p>Загрузить файл</p>
                       <img src="img/download-button.png" alt="" />
                     </label>
@@ -233,6 +231,18 @@
           </div>
         </fieldset>
       </form>
+
+      <div class="popup">
+        <form action="telegram-min.php" method="POST">
+          <p>Оставить заявку</p>
+          <img class="close" src="img/close.svg" alt="Close" />
+          <input type="text" name="user_name" placeholder="Name*" required />
+          <input type="email" name="user_email" id="" placeholder="Email*" required />
+          <input type="text" name="user_phone" id="" placeholder="Phone*" required />
+          <textarea name="user_message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+          <input type="submit" />
+        </form>
+      </div>
     </main>
     <script src="js/main.js"></script>
   </body>

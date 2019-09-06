@@ -73,7 +73,6 @@ if (document.querySelector(".estimate-form_size")) {
 
 if (document.querySelector(".popup")) {
   let btnPopup = document.querySelector(".btn-contact"),
-    btnPopup1 = document.querySelector(".btn-request"),
     popup = document.querySelector(".popup"),
     btnPopupClose = popup.querySelector(".close");
 
@@ -81,11 +80,15 @@ if (document.querySelector(".popup")) {
     popup.classList.add("popup__active");
   });
 
-  btnPopup1.addEventListener("click", function() {
-    popup.classList.add("popup__active");
-  });
-
   btnPopupClose.addEventListener("click", function() {
     popup.classList.remove("popup__active");
   });
+
+  if(document.querySelector(".btn-request")) {
+    btnPopup1 = document.querySelector(".btn-request")
+
+    btnPopup1.addEventListener("click", function() {
+      popup.classList.add("popup__active");
+    });
+  }
 }

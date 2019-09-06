@@ -200,7 +200,7 @@ input[type="submit"] {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   width: 30vw;
   padding: 2%;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 60%;
   margin-left: -15vw;
@@ -789,6 +789,16 @@ header {
   .btn {
     width: 100%;
   }
+  .popup {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding-top: 25%;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
   .services {
     margin-top: 50px;
   }
@@ -879,6 +889,16 @@ header {
     left: 50%;
     margin-top: -150px;
     margin-left: -100px;
+  }
+  .popup {
+    width: 50vw;
+    height: 50vh;
+    padding-top: 2%;
+    border-radius: 13px;
+    left: 50%;
+    top: 50%;
+    margin-left: -25%;
+    margin-top: -25%;
   }
 }
 /*# sourceMappingURL=style.css.map */

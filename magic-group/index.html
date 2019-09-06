@@ -365,12 +365,13 @@
     </footer>
 
     <div class="popup">
-      <form action="telegram.php">
+      <form action="telegram-min.php" method="POST">
         <p>Оставить заявку</p>
         <img class="close" src="img/close.svg" alt="Close" />
-        <input type="email" name="" id="" placeholder="Email*" required />
-        <input type="text" name="" id="" placeholder="Phone*" required />
-        <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
+        <input type="text" name="user_name" placeholder="Name*" required />
+        <input type="email" name="user_email" id="" placeholder="Email*" required />
+        <input type="text" name="user_phone" id="" placeholder="Phone*" required />
+        <textarea name="user_message" id="" cols="30" rows="5" placeholder="Message"></textarea>
         <input type="submit" />
       </form>
     </div>
