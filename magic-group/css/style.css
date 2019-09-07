@@ -299,7 +299,7 @@ header {
   color: #9fb3e3;
 }
 
-.clients h3::before {
+.clients::before {
   content: '';
   width: 30px;
   height: 3px;
@@ -449,40 +449,40 @@ header {
   margin-left: -100px;
 }
 
-.our-team_member_card__1::before {
+.our-team_member_card::before__1::before {
   background-image: url("../img/team/1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.our-team_member_card::before__2::before {
+  background-image: url("../img/team/2.jpg");
   background-size: 200% auto;
   background-position: center center;
 }
 
-.our-team_member_card__2::before {
-  background-image: url("../img/team/2.jpg");
-  background-size: 100% auto;
-  background-position: center 0;
-}
-
-.our-team_member_card__3::before {
+.our-team_member_card::before__3::before {
   background-image: url("../img/team/3.jpg");
   background-size: 100% auto;
   background-position: center 0;
 }
 
-.our-team_member_card__4::before {
+.our-team_member_card::before__4::before {
   background-image: url("../img/team/4.jpg");
   background-size: 100% auto;
   background-position: center 0;
 }
 
-.our-team_member_card__5::before {
+.our-team_member_card::before__5::before {
   background-image: url("../img/team/5.jpg");
-  background-size: 100% auto;
-  background-position: center 0;
-}
-
-.our-team_member_card__6::before {
-  background-image: url("../img/team/6.jpg");
   background-size: 300% auto;
   background-position: 47% 40%;
+}
+
+.our-team_member_card::before__6::before {
+  background-image: url("../img/team/6.jpg");
+  background-size: 100% auto;
+  background-position: center 0;
 }
 
 .our-team_member_name, .our-team_member_position {
@@ -641,9 +641,6 @@ header {
 .hover-dark:hover {
   background-color: #3e4659;
   color: #fff;
-}
-
-.hover-dark:hover img {
   -webkit-filter: invert(100);
           filter: invert(100);
 }
@@ -713,14 +710,14 @@ header {
 
 .team_member_card__1::before {
   background-image: url("../img/team/1.jpg");
-  background-size: 200% auto;
+  background-size: cover;
   background-position: center center;
 }
 
 .team_member_card__2::before {
   background-image: url("../img/team/2.jpg");
-  background-size: 100% auto;
-  background-position: center 0;
+  background-size: 200% auto;
+  background-position: center center;
 }
 
 .team_member_card__3::before {
@@ -737,14 +734,14 @@ header {
 
 .team_member_card__5::before {
   background-image: url("../img/team/5.jpg");
-  background-size: 100% auto;
-  background-position: center 0;
+  background-size: 300% auto;
+  background-position: 47% 40%;
 }
 
 .team_member_card__6::before {
   background-image: url("../img/team/6.jpg");
-  background-size: 300% auto;
-  background-position: 47% 40%;
+  background-size: 100% auto;
+  background-position: center 0;
 }
 
 .team_member_name, .team_member_position {
@@ -761,9 +758,6 @@ header {
 
 .team-form {
   margin: 150px 0 150px 0;
-}
-
-.team-form input[type="submit"] {
   display: block;
   width: 50%;
   margin-left: auto;
@@ -823,7 +817,7 @@ header {
   .clients {
     padding: 50px 0;
   }
-  .clients h3::before {
+  .clients::before {
     top: 70px;
     left: -20px;
   }
@@ -855,7 +849,7 @@ header {
   .estimate-form_text {
     font-size: 0.9rem;
   }
-  .team-head {
+  .team-head h1, .team-head p {
     text-align: center;
   }
   .team_member {

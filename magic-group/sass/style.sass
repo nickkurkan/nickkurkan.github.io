@@ -4,7 +4,6 @@ $btn-color: #9fb3e3
 $sub-text: #828899
 
 // Общие стили
-
 html
   overflow-x: hidden
 body
@@ -16,14 +15,11 @@ h1, h2
   font-weight: bold
   line-height: 3rem
   margin-top: 10px
-
 h3
   font-size: 1.25rem
   font-weight: bold
-
 p
   line-height: 1.5rem
-
 a
   font-weight: bold
   text-decoration: none
@@ -56,16 +52,14 @@ a
   &:hover
     background-color: darken($btn-color, 5%)
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3)
-
 input[type="submit"], .input-file
-  background-color: $btn-color
-  border: none
-  border-radius: 13px
-  font-weight: bold
-  color: #fff
-  margin-top: 20px
-  padding: 15px
-
+    background-color: $btn-color
+    border: none
+    border-radius: 13px
+    font-weight: bold
+    color: #fff
+    margin-top: 20px
+    padding: 15px
 input[type="email"], input[type="text"], textarea
   background-color: transparent
   border: 2px solid $btn-color
@@ -76,8 +70,8 @@ input[type="email"], input[type="text"], textarea
   &::placeholder
     color: $primary-text
 input[type="submit"]
-  width: 100%
-  padding: 18px
+    width: 100%
+    padding: 18px
 .input-file
   display: flex
   justify-content: space-around
@@ -137,7 +131,7 @@ input[type="submit"]
   margin-left: -15vw
   margin-top: -25%
   transition: 0.5s opacity
-  p 
+  p
     text-align: center
     font-weight: bold
     font-size: 1.25rem
@@ -153,7 +147,6 @@ input[type="submit"]
     cursor: pointer
 
 // Хедер
-
 header
   padding-top: 30px
 
@@ -163,7 +156,7 @@ header
   font-weight: bold
   white-space: nowrap
   a
-   color: $primary-text
+    color: $primary-text
   span
     color: #7d8db3
 
@@ -198,23 +191,6 @@ header
   &_text
     margin-top: 30px
 
-// &__cubes::before
-//   content: ''
-//   position: absolute
-//   background-image: url('../img/cubes.svg')
-//   width: 200px
-//   height: 200px
-//   left: -100px
-//   bottom: -110px
-// &__cubes-min::before
-//   content: ''
-//   position: absolute
-//   background-image: url('../img/cubes-min.svg')
-//   width: 120px
-//   height: 105px
-//   right: -23px
-//   top: -75px
-
 // "Кому подходит приложение"
 
 .clients
@@ -223,14 +199,14 @@ header
   background-color: $primary-text
   h3
     color: $btn-color
-    &::before
-      content: ''
-      width: 30px
-      height: 3px
-      background: $btn-color
-      position: absolute
-      left: -30px
-      top: 9px
+  &::before
+    content: ''
+    width: 30px
+    height: 3px
+    background: $btn-color
+    position: absolute
+    left: -30px
+    top: 9px
   p
     color: #ffffff
   &_header
@@ -344,30 +320,30 @@ header
         margin-top: -130px
         left: 50%
         margin-left: -100px
-      &__1::before
-        background-image: url('../img/team/1.jpg')
-        background-size: 200% auto
-        background-position: center center
-      &__2::before
-        background-image: url('../img/team/2.jpg')
-        background-size: 100% auto
-        background-position: center 0
-      &__3::before
-        background-image: url('../img/team/3.jpg')
-        background-size: 100% auto
-        background-position: center 0
-      &__4::before
-        background-image: url('../img/team/4.jpg')
-        background-size: 100% auto
-        background-position: center 0
-      &__5::before
-        background-image: url('../img/team/5.jpg')
-        background-size: 100% auto
-        background-position: center 0
-      &__6::before
-        background-image: url('../img/team/6.jpg')
-        background-size: 300% auto
-        background-position: 47% 40%
+        &__1::before
+          background-image: url('../img/team/1.jpg')
+          background-size: cover
+          background-position: center center
+        &__2::before
+          background-image: url('../img/team/2.jpg')
+          background-size: 200% auto
+          background-position: center center
+        &__3::before
+          background-image: url('../img/team/3.jpg')
+          background-size: 100% auto
+          background-position: center 0
+        &__4::before
+          background-image: url('../img/team/4.jpg')
+          background-size: 100% auto
+          background-position: center 0
+        &__5::before
+          background-image: url('../img/team/5.jpg')
+          background-size: 300% auto
+          background-position: 47% 40%
+        &__6::before
+          background-image: url('../img/team/6.jpg')
+          background-size: 100% auto
+          background-position: center 0
     &_name, &_position
       text-align: center
     &_name
@@ -463,7 +439,7 @@ header
     background-color: $primary-text
     color: #fff
     img
-      filter: invert(100)
+    filter: invert(100)
 .hover-blue
   transition: color .5s, backgorund-color .5s, border .5s
   &:hover
@@ -507,12 +483,12 @@ header
         margin-left: -100px
       &__1::before
         background-image: url('../img/team/1.jpg')
-        background-size: 200% auto
+        background-size: cover
         background-position: center center
       &__2::before
         background-image: url('../img/team/2.jpg')
-        background-size: 100% auto
-        background-position: center 0
+        background-size: 200% auto
+        background-position: center center
       &__3::before
         background-image: url('../img/team/3.jpg')
         background-size: 100% auto
@@ -523,12 +499,12 @@ header
         background-position: center 0
       &__5::before
         background-image: url('../img/team/5.jpg')
-        background-size: 100% auto
-        background-position: center 0
-      &__6::before
-        background-image: url('../img/team/6.jpg')
         background-size: 300% auto
         background-position: 47% 40%
+      &__6::before
+        background-image: url('../img/team/6.jpg')
+        background-size: 100% auto
+        background-position: center 0
     &_name, &_position
       text-align: center
     &_name
@@ -538,18 +514,18 @@ header
   &-form
     margin: 150px 0 150px 0
     input[type="submit"]
-      display: block
-      width: 50%
-      margin-left: auto
-      margin-right: auto
+    display: block
+    width: 50%
+    margin-left: auto
+    margin-right: auto
 
 // Media
 
 @media screen and ( max-width: 768px )
   //Общие стили
   h1, h2
-      font-size: 2.25rem
-      text-align: left
+    font-size: 2.25rem
+    text-align: left
   header
     margin-top: 15px
     .logo, .tel
@@ -588,10 +564,9 @@ header
   // "Кому подходит приложение"
   .clients
     padding: 50px 0
-    h3
-      &::before
-        top: 70px
-        left: -20px
+    &::before
+      top: 70px
+      left: -20px
     &_types_item
       margin: 60px 0 0 0
   // "Наша команда"
@@ -618,7 +593,7 @@ header
   //Страница "Наша команда"
   .team-head
     h1, p
-    text-align: center
+      text-align: center
   .team
     &_member
       margin-top: 150px
