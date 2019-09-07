@@ -320,30 +320,30 @@ header
         margin-top: -130px
         left: 50%
         margin-left: -100px
-        &__1::before
-          background-image: url('../img/team/1.jpg')
-          background-size: cover
-          background-position: center center
-        &__2::before
-          background-image: url('../img/team/2.jpg')
-          background-size: 200% auto
-          background-position: center center
-        &__3::before
-          background-image: url('../img/team/3.jpg')
-          background-size: 100% auto
-          background-position: center 0
-        &__4::before
-          background-image: url('../img/team/4.jpg')
-          background-size: 100% auto
-          background-position: center 0
-        &__5::before
-          background-image: url('../img/team/5.jpg')
-          background-size: 300% auto
-          background-position: 47% 40%
-        &__6::before
-          background-image: url('../img/team/6.jpg')
-          background-size: 100% auto
-          background-position: center 0
+      &__1::before
+        background-image: url('../img/team/1.jpg')
+        background-size: cover
+        background-position: center center
+      &__2::before
+        background-image: url('../img/team/2.jpg')
+        background-size: 200% auto
+        background-position: center center
+      &__3::before
+        background-image: url('../img/team/3.jpg')
+        background-size: 100% auto
+        background-position: center 0
+      &__4::before
+        background-image: url('../img/team/4.jpg')
+        background-size: 100% auto
+        background-position: center 0
+      &__5::before
+        background-image: url('../img/team/5.jpg')
+        background-size: 300% auto
+        background-position: 47% 40%
+      &__6::before
+        background-image: url('../img/team/6.jpg')
+        background-size: 100% auto
+        background-position: center 0
     &_name, &_position
       text-align: center
     &_name
@@ -386,7 +386,7 @@ header
     h2
       text-align: center
       margin-bottom: 40px
-    &_size, &_ui, &_api, &_security
+    &_size, &_ui, &_api, &_security, &_phone
       margin: 150px 0 150px 0
       &_btn
         display: flex
@@ -395,6 +395,7 @@ header
         background-color: transparent
         border: 2px solid #ffffff
         border-radius: 13px
+        margin-top: 20px
         cursor: pointer
         transition: color .5s, backgorund-color .5s
         input
@@ -439,7 +440,7 @@ header
     background-color: $primary-text
     color: #fff
     img
-    filter: invert(100)
+      filter: invert(100)
 .hover-blue
   transition: color .5s, backgorund-color .5s, border .5s
   &:hover
@@ -514,10 +515,10 @@ header
   &-form
     margin: 150px 0 150px 0
     input[type="submit"]
-    display: block
-    width: 50%
-    margin-left: auto
-    margin-right: auto
+      display: block
+      width: 50%
+      margin-left: auto
+      margin-right: auto
 
 // Media
 
@@ -582,7 +583,7 @@ header
     &-form
       h2
         text-align: left
-      &_size, &_ui, &_api, &_security, &_contact
+      &_size, &_ui, &_api, &_security, &_contact, &_phone
         margin: 50px 0 50px 0
         &_btn
           margin-top: 20px

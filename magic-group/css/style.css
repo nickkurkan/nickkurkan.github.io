@@ -449,37 +449,37 @@ header {
   margin-left: -100px;
 }
 
-.our-team_member_card::before__1::before {
+.our-team_member_card__1::before {
   background-image: url("../img/team/1.jpg");
   background-size: cover;
   background-position: center center;
 }
 
-.our-team_member_card::before__2::before {
+.our-team_member_card__2::before {
   background-image: url("../img/team/2.jpg");
   background-size: 200% auto;
   background-position: center center;
 }
 
-.our-team_member_card::before__3::before {
+.our-team_member_card__3::before {
   background-image: url("../img/team/3.jpg");
   background-size: 100% auto;
   background-position: center 0;
 }
 
-.our-team_member_card::before__4::before {
+.our-team_member_card__4::before {
   background-image: url("../img/team/4.jpg");
   background-size: 100% auto;
   background-position: center 0;
 }
 
-.our-team_member_card::before__5::before {
+.our-team_member_card__5::before {
   background-image: url("../img/team/5.jpg");
   background-size: 300% auto;
   background-position: 47% 40%;
 }
 
-.our-team_member_card::before__6::before {
+.our-team_member_card__6::before {
   background-image: url("../img/team/6.jpg");
   background-size: 100% auto;
   background-position: center 0;
@@ -547,11 +547,11 @@ header {
   margin-bottom: 40px;
 }
 
-.estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security {
+.estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security, .estimate-form_phone {
   margin: 150px 0 150px 0;
 }
 
-.estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn {
+.estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn, .estimate-form_phone_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,26 +562,27 @@ header {
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 13px;
+  margin-top: 20px;
   cursor: pointer;
   -webkit-transition: color .5s, backgorund-color .5s;
   transition: color .5s, backgorund-color .5s;
 }
 
-.estimate-form_size_btn input, .estimate-form_ui_btn input, .estimate-form_api_btn input, .estimate-form_security_btn input {
+.estimate-form_size_btn input, .estimate-form_ui_btn input, .estimate-form_api_btn input, .estimate-form_security_btn input, .estimate-form_phone_btn input {
   opacity: 0;
 }
 
-.estimate-form_size_btn img, .estimate-form_ui_btn img, .estimate-form_api_btn img, .estimate-form_security_btn img {
+.estimate-form_size_btn img, .estimate-form_ui_btn img, .estimate-form_api_btn img, .estimate-form_security_btn img, .estimate-form_phone_btn img {
   width: 40px;
   height: 40px;
 }
 
-.estimate-form_size_btn .img-invert, .estimate-form_ui_btn .img-invert, .estimate-form_api_btn .img-invert, .estimate-form_security_btn .img-invert {
+.estimate-form_size_btn .img-invert, .estimate-form_ui_btn .img-invert, .estimate-form_api_btn .img-invert, .estimate-form_security_btn .img-invert, .estimate-form_phone_btn .img-invert {
   -webkit-filter: invert(100);
           filter: invert(100);
 }
 
-.estimate-form_size_btn .text-wrap, .estimate-form_ui_btn .text-wrap, .estimate-form_api_btn .text-wrap, .estimate-form_security_btn .text-wrap {
+.estimate-form_size_btn .text-wrap, .estimate-form_ui_btn .text-wrap, .estimate-form_api_btn .text-wrap, .estimate-form_security_btn .text-wrap, .estimate-form_phone_btn .text-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,6 +642,9 @@ header {
 .hover-dark:hover {
   background-color: #3e4659;
   color: #fff;
+}
+
+.hover-dark:hover img {
   -webkit-filter: invert(100);
           filter: invert(100);
 }
@@ -758,6 +762,9 @@ header {
 
 .team-form {
   margin: 150px 0 150px 0;
+}
+
+.team-form input[type="submit"] {
   display: block;
   width: 50%;
   margin-left: auto;
@@ -837,10 +844,10 @@ header {
   .estimate-form h2 {
     text-align: left;
   }
-  .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security, .estimate-form_contact {
+  .estimate-form_size, .estimate-form_ui, .estimate-form_api, .estimate-form_security, .estimate-form_contact, .estimate-form_phone {
     margin: 50px 0 50px 0;
   }
-  .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn, .estimate-form_contact_btn {
+  .estimate-form_size_btn, .estimate-form_ui_btn, .estimate-form_api_btn, .estimate-form_security_btn, .estimate-form_contact_btn, .estimate-form_phone_btn {
     margin-top: 20px;
   }
   .estimate-form_ui, .estimate-form_security {

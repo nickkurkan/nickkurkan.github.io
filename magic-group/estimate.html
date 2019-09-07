@@ -21,7 +21,7 @@
             <div
               class="tel col-12 col-md-4 col-lg-3 offset-md-1 offset-lg-5 d-flex align-items-center justify-content-center order-1 order-md-0"
             >
-              <a href="tel:+38 (095) 00 00 000">+38 (095) 00 00 000</a>
+            <a href="tel:+38 (095) 00 00 000">+38 (063) 832 52 94</a>
             </div>
             <div class="col-12 col-md-3 col-lg-2 order-0 order-md-1">
               <button class="btn btn-contact">
@@ -88,13 +88,13 @@
         <fieldset class="estimate-form_ui">
           <div class="container-fluid">
             <div class="row">
-              <h2 class="col-12">2. Какой уровень интерфейса вы бы хотели?</h2>
+              <h2 class="col-12">2. Какой стиль приложения вы хотите?</h2>
               <div class="col-12 col-md-4">
                 <label class="estimate-form_ui_btn hover-blue">
                   <input type="radio" name="ui" id="" value="S" />
                   <div class="text-wrap">
                     <img src="img/scooter.png" class="img-invert" />
-                    <p class="estimate-form_text">Малый</p>
+                    <p class="estimate-form_text">Минимализм</p>
                   </div>
                 </label>
               </div>
@@ -103,7 +103,7 @@
                   <input type="radio" name="ui" id="" value="M" />
                   <div class="text-wrap">
                     <img src="img/bicycle.png" class="img-invert" />
-                    <p class="estimate-form_text">Основной</p>
+                    <p class="estimate-form_text">Цвета и градиенты</p>
                   </div>
                 </label>
               </div>
@@ -112,7 +112,7 @@
                   <input type="radio" name="ui" id="" vvalue=""">
                   <div class="text-wrap">
                     <img src="img/motorcycle.png" class="img-invert" />
-                    <p class="estimate-form_text">Полированный</p>
+                    <p class="estimate-form_text">Авторские иллюстрации и иконки</p>
                   </div>
                 </label>
               </div>
@@ -125,10 +125,10 @@
               <h2 class="col-12">3. Внешние API и Интеграции</h2>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="integration_data-feed" id="" />
+                  <input type="checkbox" name="integration_blockchain" id="" />
                   <div class="text-wrap">
-                    <img src="img/network.png" class="" />
-                    <p class="estimate-form_text">Фид данных</p>
+                    <img src="img/blockchain.svg" class="" />
+                    <p class="estimate-form_text">Blockchain</p>
                   </div>
                 </label>
               </div>
@@ -146,16 +146,25 @@
                   <input type="checkbox" name="integration_sms" id="" />
                   <div class="text-wrap">
                     <img src="img/sms.png" class="" />
-                    <p class="estimate-form_text">Смс сообщения</p>
+                    <p class="estimate-form_text">Email и SMS сообщения</p>
                   </div>
                 </label>
               </div>
               <div class="col-12 col-md-3">
                 <label class="estimate-form_api_btn hover-dark">
-                  <input type="checkbox" name="integration_mask-phone" id="" />
+                  <input type="checkbox" name="integration_googlemaps" id="" />
                   <div class="text-wrap">
-                    <img src="img/contact.png" class="" />
-                    <p class="estimate-form_text">Маскировка номера</p>
+                    <img src="img/google-maps.svg" class="" />
+                    <p class="estimate-form_text">Google Maps</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_api_btn hover-dark">
+                  <input type="checkbox" name="integration_social" id="" />
+                  <div class="text-wrap">
+                    <img src="img/network.png" class="" />
+                    <p class="estimate-form_text">Facebook, Google, LinkedIn</p>
                   </div>
                 </label>
               </div>
@@ -171,7 +180,7 @@
                   <input type="checkbox" name="security_ssl" id="" />
                   <div class="text-wrap">
                     <img src="img/ssl.png" class="img-invert" />
-                    <p class="estimate-form_text">SSL</p>
+                    <p class="estimate-form_text">Шифрование данных</p>
                   </div>
                 </label>
               </div>
@@ -179,8 +188,8 @@
                 <label class="estimate-form_security_btn hover-blue">
                   <input type="checkbox" name="security_ddos" id="" />
                   <div class="text-wrap">
-                    <img src="img/shield.png" class="img-invert" />
-                    <p class="estimate-form_text">DDOS Защита</p>
+                    <img src="img/incognito.svg" class="img-invert" />
+                    <p class="estimate-form_text">Анонимность</p>
                   </div>
                 </label>
               </div>
@@ -190,6 +199,58 @@
                   <div class="text-wrap">
                     <img src="img/authentication.png" class="img-invert" />
                     <p class="estimate-form_text">Двухфакторная аутентификация</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="estimate-form_phone">
+          <div class="container-fluid">
+            <div class="row">
+              <h2 class="col-12">5. Какие функции телефона вы хотите использовать?</h2>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_phone_btn hover-dark">
+                  <input type="checkbox" name="phone_location" id="" />
+                  <div class="text-wrap">
+                    <img src="img/location.svg" class="" />
+                    <p class="estimate-form_text">Локация</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_phone_btn hover-dark">
+                  <input type="checkbox" name="phone_camera" id="" />
+                  <div class="text-wrap">
+                    <img src="img/camera.svg" class="" />
+                    <p class="estimate-form_text">Камера</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_phone_btn hover-dark">
+                  <input type="checkbox" name="phone_gyroscope" id="" />
+                  <div class="text-wrap">
+                    <img src="img/gyroscope.svg" class="" />
+                    <p class="estimate-form_text">Гироскоп</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_phone_btn hover-dark">
+                  <input type="checkbox" name="phone_contacts" id="" />
+                  <div class="text-wrap">
+                    <img src="img/contacts.svg" class="" />
+                    <p class="estimate-form_text">Телефонная книга</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-12 col-md-3">
+                <label class="estimate-form_phone_btn hover-dark">
+                  <input type="checkbox" name="phone_another" id="" />
+                  <div class="text-wrap">
+                    <img src="img/another.svg" class="" />
+                    <p class="estimate-form_text">Другое</p>
                   </div>
                 </label>
               </div>
@@ -219,13 +280,6 @@
                     <input type="submit" />
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-lg-6 col-xl-4 offset-xl-1">
-                <p>
-                  Обратите внимание, что все сметы предназначены только для указания стоимости разработки и сроков и не включают в себя все
-                  расходы на хостинг, платные услуги или приобретенные активы любого рода. Все цены указаны в долларах США и включают налог
-                  с продаж.
-                </p>
               </div>
             </div>
           </div>
