@@ -191,7 +191,7 @@ input[type="submit"] {
   white-space: pre-line;
 }
 
-.popup {
+.popup, .popup-project {
   visibility: hidden;
   opacity: 0;
   background-color: #dbdee2;
@@ -209,24 +209,43 @@ input[type="submit"] {
   transition: 0.5s opacity;
 }
 
-.popup p {
+.popup p, .popup-project p {
   text-align: center;
   font-weight: bold;
   font-size: 1.25rem;
 }
 
-.popup__active {
+.popup__active, .popup-project__active {
   visibility: visible;
   opacity: 1;
 }
 
-.popup .close {
+.popup .close, .popup-project .close {
   width: 20px;
   height: 20px;
   position: absolute;
   top: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+.popup-project {
+  overflow: scroll;
+  width: 50vw;
+  height: 100%;
+  padding-top: 4%;
+  top: 30%;
+  left: 50%;
+  margin-top: -15%;
+  margin-left: -25%;
+}
+
+.popup-project img {
+  width: 100%;
+}
+
+.popup-project .project {
+  border-radius: 13px;
 }
 
 header {
@@ -397,9 +416,11 @@ header {
 
 .slider .slide {
   border-radius: 13px;
+  cursor: pointer;
 }
 
 .slider .slide img {
+  border-radius: 13px;
   width: 100%;
 }
 
@@ -790,7 +811,7 @@ header {
   .btn {
     width: 100%;
   }
-  .popup {
+  .popup, .popup-project {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
@@ -799,6 +820,9 @@ header {
     top: 0;
     margin-left: 0;
     margin-top: 0;
+  }
+  .popup-project {
+    padding-top: 10%;
   }
   .services {
     margin-top: 50px;
@@ -900,6 +924,14 @@ header {
     top: 50%;
     margin-left: -25%;
     margin-top: -25%;
+  }
+  .popup-project {
+    width: 90vw;
+    height: 90vh;
+    padding-top: 6%;
+    border-radius: 13px;
+    left: 5%;
+    top: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

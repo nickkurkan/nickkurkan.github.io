@@ -117,7 +117,7 @@ input[type="submit"]
     font-size: 0.9rem
     white-space: pre-line
 
-.popup
+.popup, .popup-project
   visibility: hidden
   opacity: 0
   background-color: #dbdee2
@@ -145,6 +145,20 @@ input[type="submit"]
     top: 15px
     right: 15px
     cursor: pointer
+
+.popup-project
+  overflow: scroll
+  width: 50vw
+  height: 100%
+  padding-top: 4%
+  top: 30%
+  left: 50%
+  margin-top: -15%
+  margin-left: -25%
+  img 
+    width: 100%
+  .project
+    border-radius: 13px
 
 // Хедер
 header
@@ -283,7 +297,9 @@ header
   scroll-behavior: smooth
   .slide
     border-radius: 13px
+    cursor: pointer
     img
+      border-radius: 13px
       width: 100%
   &::-webkit-scrollbar
     height: 10px
@@ -535,7 +551,7 @@ header
       margin-top: 15px
   .btn
     width: 100%
-  .popup
+  .popup, .popup-project
     width: 100vw
     height: 100vh
     border-radius: 0
@@ -544,6 +560,8 @@ header
     top: 0
     margin-left: 0
     margin-top: 0
+  .popup-project
+    padding-top: 10%
 
   //Главный экран
   .services
@@ -630,3 +648,10 @@ header
     top: 50%
     margin-left: -25%
     margin-top: -25%
+  .popup-project
+    width: 90vw
+    height: 90vh
+    padding-top: 6%
+    border-radius: 13px
+    left: 5%
+    top: 5%

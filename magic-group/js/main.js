@@ -14,7 +14,11 @@ if (document.querySelector(".estimate-form_size")) {
     securitySection = document.querySelector(".estimate-form_security"),
     btnsSecurity = securitySection.querySelectorAll(".estimate-form_security_btn"),
     btnsSecurityInputs = securitySection.querySelectorAll("input"),
-    securityImg = securitySection.querySelectorAll("img");
+    securityImg = securitySection.querySelectorAll("img"),
+    phoneSection = document.querySelector(".estimate-form_phone"),
+    btnsPhone = phoneSection.querySelectorAll(".estimate-form_phone_btn"),
+    btnsPhoneInputs = phoneSection.querySelectorAll("input");
+
 
   for (let i = 0; i < btnsSizeInputs.length; i++) {
     btnsSizeInputs[i].addEventListener("change", function() {
@@ -67,6 +71,18 @@ if (document.querySelector(".estimate-form_size")) {
       }
     });
   }
+
+  for (let i = 0; i < btnsPhoneInputs.length; i++) {
+    btnsPhoneInputs[i].addEventListener("change", function() {
+      if (btnsPhoneInputs[i].checked) {
+        btnsPhone[i].classList.toggle("hover-dark");
+        btnsPhone[i].style.backgroundColor = "#fff";
+      } else {
+        btnsPhone[i].classList.toggle("hover-dark");
+        btnsPhone[i].style.backgroundColor = "";
+      }
+    });
+  }
 }
 
 /* Pop-Up script */
@@ -90,5 +106,25 @@ if (document.querySelector(".popup")) {
     btnPopup1.addEventListener("click", function() {
       popup.classList.add("popup__active");
     });
+  }
+
+  if (document.querySelector(".popup-project")){
+    let projectBtns = document.querySelectorAll('.slide'),
+        popupProject = document.querySelector('.popup-project');
+
+    for (let i = 0; i < projectBtns.length; i++) {
+      projectBtns[i].addEventListener('click', function () {
+        popupProject.innerHTML = `<img class="close" src="img/close.svg" alt="Close">
+        <img class="project" src="img/projects/project_${i+1}_full.png" alt="Project">`
+        popupProject.classList.add("popup__active");
+        let btnPopupClose = popupProject.querySelector(".close");
+        btnPopupClose.addEventListener("click", function() {
+          popupProject.classList.remove("popup__active");
+        });
+      })
+    }
+
+    
+
   }
 }
