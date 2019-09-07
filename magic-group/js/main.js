@@ -115,7 +115,7 @@ if (document.querySelector(".popup")) {
     for (let i = 0; i < projectBtns.length; i++) {
       projectBtns[i].addEventListener('click', function () {
         popupProject.innerHTML = `<img class="close" src="img/close.svg" alt="Close">
-        <img class="project" src="img/projects/project_${i+1}_full.png" alt="Project">`
+        <img class="project" src="img/projects/project_${i+1}_full.jpg" alt="Project">`
         popupProject.classList.add("popup__active");
         let btnPopupClose = popupProject.querySelector(".close");
         btnPopupClose.addEventListener("click", function() {
