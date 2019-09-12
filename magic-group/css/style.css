@@ -71,6 +71,10 @@ a {
   width: 50%;
 }
 
+.btn-aboutus {
+  display: none;
+}
+
 .btn:hover {
   background-color: #8ba3dd;
   -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
