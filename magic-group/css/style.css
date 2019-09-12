@@ -276,6 +276,12 @@ header {
   color: #3e4659;
 }
 
+.tel img, .email img {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
 .main-page {
   margin-top: 100px;
 }
@@ -318,7 +324,7 @@ header {
   color: #9fb3e3;
 }
 
-.clients::before {
+.clients h3::before {
   content: '';
   width: 30px;
   height: 3px;
@@ -848,7 +854,7 @@ header {
   .clients {
     padding: 50px 0;
   }
-  .clients::before {
+  .clients h3::before {
     top: 70px;
     left: -20px;
   }
