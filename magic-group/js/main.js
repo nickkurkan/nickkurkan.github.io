@@ -123,8 +123,13 @@ if (document.querySelector(".popup")) {
         });
       })
     }
-
-    
-
   }
 }
+
+/* Phone number mask */
+
+let element = document.querySelector('.mask-phone');
+let maskOptions = {
+  mask: '+{38\\0}(00)000-00-00'
+};
+let mask = IMask(element, maskOptions);
