@@ -271,16 +271,16 @@ header {
   color: #7d8db3;
 }
 
-.tel, .email {
-  display: inline-block;
+.tel, .email, .linkedin {
+  display: block;
   font-size: 1rem;
 }
 
-.tel a, .email a {
+.tel a, .email a, .linkedin a {
   color: #3e4659;
 }
 
-.tel img, .email img {
+.tel img, .email img, .linkedin img {
   width: 15px;
   height: 15px;
   margin-left: 5px;
@@ -543,8 +543,8 @@ header {
   font-size: 0.9rem;
 }
 
-.footer .contacts .tel {
-  margin-right: 150px;
+.footer .contacts .tel, .footer .contacts .email, .footer .contacts .linkedin {
+  margin-top: 20px;
 }
 
 .footer .contacts_text {
