@@ -234,13 +234,13 @@ input[type="submit"] {
 }
 
 .popup-project {
-  overflow: scroll;
+  overflow-y: scroll;
   width: 50vw;
   height: 100%;
   padding-top: 3%;
   top: 30%;
   left: 50%;
-  margin-top: -15%;
+  margin-top: -13%;
   margin-left: -25%;
 }
 
@@ -838,7 +838,7 @@ header {
     margin-top: 0;
   }
   .popup-project {
-    padding-top: 10%;
+    padding-top: 12%;
   }
   .services {
     margin-top: 50px;
