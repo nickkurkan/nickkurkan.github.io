@@ -286,6 +286,12 @@ header {
   margin-left: 5px;
 }
 
+.linkedin img {
+  width: 25%;
+  height: 25%;
+  margin: 0;
+}
+
 .main-page {
   margin-top: 100px;
 }
